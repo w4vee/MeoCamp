@@ -1,0 +1,6 @@
+@MeoCamp_HostAddress = http://localhost:5010
+
+GET {{MeoCamp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
