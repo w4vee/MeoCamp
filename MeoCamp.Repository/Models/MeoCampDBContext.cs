@@ -8,6 +8,10 @@ namespace MeoCamp.Repository.Models;
 
 public partial class MeoCampDBContext : DbContext
 {
+    public MeoCampDBContext()
+    {
+    }
+
     public MeoCampDBContext(DbContextOptions<MeoCampDBContext> options)
         : base(options)
     {
@@ -32,6 +36,10 @@ public partial class MeoCampDBContext : DbContext
     public virtual DbSet<ShoppingCart> ShoppingCarts { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=W4V3\\SQL2019;Initial Catalog=MeoCampDB;User ID=sa;Password=12345;Encrypt=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -191,6 +199,9 @@ public partial class MeoCampDBContext : DbContext
                 .HasColumnType("text")
                 .HasColumnName("description");
             entity.Property(e => e.IsRentable).HasColumnName("is_rentable");
+            entity.Property(e => e.PhotoPath)
+                .HasMaxLength(255)
+                .HasColumnName("photo_path");
             entity.Property(e => e.Price)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("price");

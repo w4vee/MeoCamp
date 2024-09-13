@@ -27,6 +27,8 @@ public partial class Product
 
     public string Status { get; set; }
 
+    public string PhotoPath { get; set; }
+
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 
     public virtual Category Category { get; set; }

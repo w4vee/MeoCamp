@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeoCamp.API", "MeoCamp\MeoCamp.API.csproj", "{C1F1BEDF-996A-4546-B1D4-81D5F8291134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeoCamp.Repository", "MeoCamp.Repository\MeoCamp.Repository.csproj", "{FC9173A9-AB94-4451-A0CD-27FDC547392C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeoCamp.Data", "MeoCamp.Repository\MeoCamp.Data.csproj", "{FC9173A9-AB94-4451-A0CD-27FDC547392C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeoCamp.Service", "MeoCamp.Service\MeoCamp.Service.csproj", "{47A7B211-4D4D-40D7-8505-EA2701450DCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeoCamp.Service", "MeoCamp.Service\MeoCamp.Service.csproj", "{47A7B211-4D4D-40D7-8505-EA2701450DCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

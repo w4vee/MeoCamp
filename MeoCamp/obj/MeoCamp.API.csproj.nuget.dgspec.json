@@ -4,12 +4,12 @@
     "D:\\MeoCamp\\MeoCamp\\MeoCamp\\MeoCamp.API.csproj": {}
   },
   "projects": {
-    "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Repository.csproj": {
+    "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Repository.csproj",
-        "projectName": "MeoCamp.Repository",
-        "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Repository.csproj",
+        "projectUniqueName": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj",
+        "projectName": "MeoCamp.Data",
+        "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
         "outputPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\obj\\",
         "projectStyle": "PackageReference",
@@ -118,8 +118,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Repository.csproj": {
-                "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Repository.csproj"
+              "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
+                "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj"
               }
             }
           }

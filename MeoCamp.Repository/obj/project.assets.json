@@ -4113,9 +4113,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Repository.csproj",
-      "projectName": "MeoCamp.Repository",
-      "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Repository.csproj",
+      "projectUniqueName": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj",
+      "projectName": "MeoCamp.Data",
+      "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
       "outputPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\obj\\",
       "projectStyle": "PackageReference",

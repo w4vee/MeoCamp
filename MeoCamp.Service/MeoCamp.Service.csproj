@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MeoCamp.Repository\MeoCamp.Repository.csproj" />
+    <ProjectReference Include="..\MeoCamp.Repository\MeoCamp.Data.csproj" />
   </ItemGroup>
 
 </Project>

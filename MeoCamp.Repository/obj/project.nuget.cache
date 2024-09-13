@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VBa102Q9SiHofSooY3KsEguEtfjFYi0fY/TLoKA3AqclZ4iccB94h8ns1A9j0hHWNSWtBYIUi9nNqwkQNeom+A==",
+  "dgSpecHash": "QFbeVkYXX0ZIoJDxZFVHDfUQCqYcGgh1qjDmObKDhc1DjSbRjDeEnGFBeFPrkBYgS9lb3h0ESl1+o+vtcokd3A==",
   "success": true,
-  "projectFilePath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Repository.csproj",
+  "projectFilePath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
