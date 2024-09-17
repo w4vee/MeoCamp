@@ -1,0 +1,16 @@
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\bin\Debug\net8.0\MeoCamp.Service.deps.json
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\bin\Debug\net8.0\MeoCamp.Service.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\bin\Debug\net8.0\MeoCamp.Service.pdb
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\bin\Debug\net8.0\MeoCamp.Data.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\bin\Debug\net8.0\MeoCamp.Data.pdb
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\MeoCamp.Service.csproj.AssemblyReference.cache
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\MeoCamp.Service.GeneratedMSBuildEditorConfig.editorconfig
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\MeoCamp.Service.AssemblyInfoInputs.cache
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\MeoCamp.Service.AssemblyInfo.cs
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\MeoCamp.Service.csproj.CoreCompileInputs.cache
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\MeoCamp.Service.sourcelink.json
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\MeoCamp..53D07C92.Up2Date
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\MeoCamp.Service.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\refint\MeoCamp.Service.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\MeoCamp.Service.pdb
+d:\Education\EXE201\MeoCamp_fork\MeoCamp.Service\obj\Debug\net8.0\ref\MeoCamp.Service.dll
