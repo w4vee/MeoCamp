@@ -1,0 +1,15 @@
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\bin\Debug\net8.0\MeoCamp.Data.deps.json
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\bin\Debug\net8.0\MeoCamp.Data.runtimeconfig.json
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\bin\Debug\net8.0\MeoCamp.Data.dll
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\bin\Debug\net8.0\MeoCamp.Data.pdb
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\MeoCamp.Data.csproj.AssemblyReference.cache
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\MeoCamp.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\MeoCamp.Data.AssemblyInfoInputs.cache
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\MeoCamp.Data.AssemblyInfo.cs
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\MeoCamp.Data.csproj.CoreCompileInputs.cache
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\MeoCamp.Data.sourcelink.json
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\MeoCamp.Data.dll
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\refint\MeoCamp.Data.dll
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\MeoCamp.Data.pdb
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\MeoCamp.Data.genruntimeconfig.cache
+D:\MeoCamp\MeoCamp\MeoCamp.Repository\obj\Debug\net8.0\ref\MeoCamp.Data.dll

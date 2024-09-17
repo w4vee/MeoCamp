@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace MeoCamp.Repository.Models;
 
@@ -38,14 +39,24 @@ public partial class MeoCampDBContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=W4V3\\SQL2019;Initial Catalog=MeoCampDB;User ID=sa;Password=12345;Encrypt=False");
+        => optionsBuilder.UseSqlServer(GetConnectionString());
+
+    private string GetConnectionString()
+    {
+        IConfiguration config = new ConfigurationBuilder()
+             .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", true, true)
+                    .Build();
+        var strConn = config["ConnectionStrings:DefaultConnectionString"];
+
+        return strConn;
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<CartItem>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__cart_ite__3213E83F9F069DF6");
+            entity.HasKey(e => e.Id).HasName("PK__cart_ite__3213E83F33DAE2E1");
 
             entity.ToTable("cart_items");
 
@@ -70,7 +81,7 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__categori__3213E83F8D2C2013");
+            entity.HasKey(e => e.Id).HasName("PK__categori__3213E83F86CF20DF");
 
             entity.ToTable("categories");
 
@@ -88,7 +99,7 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__orders__3213E83FD3E2DD01");
+            entity.HasKey(e => e.Id).HasName("PK__orders__3213E83FCCF4A0A9");
 
             entity.ToTable("orders");
 
@@ -120,7 +131,7 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__order_de__3213E83F3D74E4B3");
+            entity.HasKey(e => e.Id).HasName("PK__order_de__3213E83F36CB7D38");
 
             entity.ToTable("order_details");
 
@@ -154,7 +165,7 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<Payment>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__payments__3213E83F6FF211AC");
+            entity.HasKey(e => e.Id).HasName("PK__payments__3213E83F5D958A55");
 
             entity.ToTable("payments");
 
@@ -184,7 +195,7 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__products__3213E83FFDD7515B");
+            entity.HasKey(e => e.Id).HasName("PK__products__3213E83F3CC81749");
 
             entity.ToTable("products");
 
@@ -199,9 +210,6 @@ public partial class MeoCampDBContext : DbContext
                 .HasColumnType("text")
                 .HasColumnName("description");
             entity.Property(e => e.IsRentable).HasColumnName("is_rentable");
-            entity.Property(e => e.PhotoPath)
-                .HasMaxLength(255)
-                .HasColumnName("photo_path");
             entity.Property(e => e.Price)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("price");
@@ -227,7 +235,7 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<Rental>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__rentals__3213E83F45C142A3");
+            entity.HasKey(e => e.Id).HasName("PK__rentals__3213E83F2ACD7CEF");
 
             entity.ToTable("rentals");
 
@@ -267,7 +275,7 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<Revenue>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__revenue__3213E83FAA1ECC75");
+            entity.HasKey(e => e.Id).HasName("PK__revenue__3213E83F1FAF6EEA");
 
             entity.ToTable("revenue");
 
@@ -285,7 +293,7 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<ShoppingCart>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__shopping__3213E83FF3DC7C26");
+            entity.HasKey(e => e.Id).HasName("PK__shopping__3213E83F457667DE");
 
             entity.ToTable("shopping_carts");
 
@@ -307,49 +315,59 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__users__3213E83F5C3A5BF1");
+            entity.HasKey(e => e.Id).HasName("PK__users__3213E83F946DDE4B");
 
             entity.ToTable("users");
 
-            entity.HasIndex(e => e.Username, "UQ__users__F3DBC572154E3CC6").IsUnique();
+            entity.HasIndex(e => e.Username, "UQ__users__F3DBC572F670EC25").IsUnique();
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd() // Thay đổi từ ValueGeneratedNever() sang ValueGeneratedOnAdd()
                 .HasColumnName("id");
+
             entity.Property(e => e.Address)
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("address");
+
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
+
             entity.Property(e => e.Email)
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("email");
+
             entity.Property(e => e.Fullname)
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("fullname");
+
             entity.Property(e => e.Password)
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("password");
+
             entity.Property(e => e.PhoneNumber)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("phone_number");
+
             entity.Property(e => e.Role)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("role");
+
             entity.Property(e => e.Status)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("status");
+
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("updated_at");
+
             entity.Property(e => e.Username)
                 .HasMaxLength(255)
                 .IsUnicode(false)

@@ -7,11 +7,11 @@ namespace MeoCamp.Repository.Models;
 
 public partial class Rental
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
-    public Guid? CustomerId { get; set; }
+    public int? CustomerId { get; set; }
 
-    public Guid? ProductId { get; set; }
+    public int? ProductId { get; set; }
 
     public DateTime? RentalStartDate { get; set; }
 
