@@ -7,7 +7,7 @@ namespace MeoCamp.Repository.Models;
 
 public partial class Product
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public string ProductName { get; set; }
 
@@ -19,15 +19,13 @@ public partial class Product
 
     public bool? IsRentable { get; set; }
 
-    public Guid? CategoryId { get; set; }
+    public int? CategoryId { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 
     public string Status { get; set; }
-
-    public string PhotoPath { get; set; }
 
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 

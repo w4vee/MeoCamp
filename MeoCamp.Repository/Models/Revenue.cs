@@ -7,7 +7,7 @@ namespace MeoCamp.Repository.Models;
 
 public partial class Revenue
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public int? TotalOrders { get; set; }
 

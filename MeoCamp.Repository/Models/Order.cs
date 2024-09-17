@@ -7,9 +7,9 @@ namespace MeoCamp.Repository.Models;
 
 public partial class Order
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
-    public Guid? CustomerId { get; set; }
+    public int? CustomerId { get; set; }
 
     public DateTime? OrderDate { get; set; }
 
