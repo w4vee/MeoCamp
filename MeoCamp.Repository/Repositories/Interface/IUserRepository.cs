@@ -1,4 +1,5 @@
 ﻿using MeoCamp.Repository.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,10 @@ namespace MeoCamp.Data.Repositories.Interface
 {
     public interface IUserRepository
     {
+        public Task<List<User>> GetAllUserAsync();
         public Task<User?> GetUserByUsernameAsync(string username);
         public Task<User> Register(User user);
+        public Task<User> UpdateProfile(User user);
 
     }
 }

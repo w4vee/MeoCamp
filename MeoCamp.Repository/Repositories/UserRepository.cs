@@ -18,6 +18,11 @@ namespace MeoCamp.Data.Repositories
             _context = context;
         }
 
+        public async Task<List<User>> GetAllUserAsync()
+        {
+            return await _context.Set<User>().ToListAsync();
+        }
+
         public async Task<User?> GetUserByUsernameAsync(string username)
         {
             var user = await _context.Users.FirstOrDefaultAsync(x => x.Username == username);
@@ -30,11 +35,14 @@ namespace MeoCamp.Data.Repositories
             await _context.SaveChangesAsync();
             return user;
         }
-    }
 
-      
-            
-
-       
+        public async Task<User> UpdateProfile(User user)
+        {
+            var tracker = _context.Attach(user);
+            tracker.State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return user;
+        }
+    }   
 }
 

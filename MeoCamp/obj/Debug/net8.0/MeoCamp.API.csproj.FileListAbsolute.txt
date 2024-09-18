@@ -73,3 +73,4 @@ d:\Education\EXE201\MeoCamp_fork\MeoCamp\obj\Debug\net8.0\refint\MeoCamp.API.dll
 d:\Education\EXE201\MeoCamp_fork\MeoCamp\obj\Debug\net8.0\MeoCamp.API.pdb
 d:\Education\EXE201\MeoCamp_fork\MeoCamp\obj\Debug\net8.0\MeoCamp.API.genruntimeconfig.cache
 d:\Education\EXE201\MeoCamp_fork\MeoCamp\obj\Debug\net8.0\ref\MeoCamp.API.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

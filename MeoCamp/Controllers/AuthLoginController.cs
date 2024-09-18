@@ -30,7 +30,7 @@ namespace MeoCamp.API.Controllers
         [HttpPost(Name = "login")]
         public async Task<IActionResult> Login(LoginModel model)
         {
-            var user = await _userService.Login(model.Username, model.Password);
+            var user = await _userService.Login(model);
             if (user != null)
             {
                 // Login successful
@@ -48,7 +48,7 @@ namespace MeoCamp.API.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _userService.Register(model.Fullname, model.Username, model.Password, model.Email);
+                var result = await _userService.Register(model);
                 if (result)
                 {
                     return Ok("User registered successfully.");
@@ -56,6 +56,39 @@ namespace MeoCamp.API.Controllers
                 else
                 {
                     return BadRequest("Username already exists.");
+                }
+            }
+            return BadRequest("Invalid data.");
+        }
+        [HttpPost("listuser")]
+        public async Task<IActionResult> GetAll()
+        {
+            var result = await _userService.ViewListUser();
+            if (result != null)
+            {
+                // Login successful
+                return Ok(result);
+            }
+            else
+            {
+                // Login failed
+                return BadRequest("List is empty");
+            }
+        }
+
+        [HttpPost("UpdateProfile/{username}")]
+        public async Task<IActionResult> UpdateProfile(String username, ProfileModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _userService.UpdateProfile(username, model);
+                if (result)
+                {
+                    return Ok("User updated successfully.");
+                }
+                else
+                {
+                    return BadRequest("Username not exists.");
                 }
             }
             return BadRequest("Invalid data.");
