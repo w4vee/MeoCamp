@@ -23,7 +23,7 @@ public partial class User
 
     public DateTime? UpdatedAt { get; set; }
 
-    public string Status { get; set; }
+    public bool? Status { get; set; }
 
     public string Email { get; set; }
 

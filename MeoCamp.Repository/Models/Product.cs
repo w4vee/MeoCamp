@@ -13,9 +13,9 @@ public partial class Product
 
     public string Description { get; set; }
 
-    public decimal? Price { get; set; }
+    public double? Price { get; set; }
 
-    public decimal? RentalPrice { get; set; }
+    public double? RentalPrice { get; set; }
 
     public bool? IsRentable { get; set; }
 
@@ -25,7 +25,9 @@ public partial class Product
 
     public DateTime? UpdatedAt { get; set; }
 
-    public string Status { get; set; }
+    public bool? Status { get; set; }
+
+    public string Image { get; set; }
 
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 
