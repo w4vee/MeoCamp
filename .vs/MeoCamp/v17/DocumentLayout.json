@@ -3,52 +3,96 @@
   "WorkspaceRootPath": "D:\\MeoCamp\\MeoCamp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\models\\meocampdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\models\\meocampdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|d:\\meocamp\\meocamp\\meocamp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|solutionrelative:meocamp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|d:\\meocamp\\meocamp\\meocamp\\controllers\\authlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|solutionrelative:meocamp\\controllers\\authlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\services\\interface\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\services\\interface\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|d:\\meocamp\\meocamp\\meocamp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|solutionrelative:meocamp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|d:\\meocamp\\meocamp\\meocamp\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|solutionrelative:meocamp\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\repositories\\interface\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\repositories\\interface\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\businessmodel\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\businessmodel\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\businessmodel\\updateproductmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\businessmodel\\updateproductmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\businessmodel\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\businessmodel\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\businessmodel\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\businessmodel\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\repositories\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\repositories\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\models\\meocampdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\models\\meocampdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\businessmodel\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\businessmodel\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|d:\\meocamp\\meocamp\\meocamp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|solutionrelative:meocamp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|d:\\meocamp\\meocamp\\meocamp.service\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A7B211-4D4D-40D7-8505-EA2701450DCF}|MeoCamp.Service\\MeoCamp.Service.csproj|solutionrelative:meocamp.service\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\repositories\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\repositories\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|solutionrelative:meocamp.repository\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|d:\\meocamp\\meocamp\\meocamp\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|solutionrelative:meocamp\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|d:\\meocamp\\meocamp\\meocamp\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|solutionrelative:meocamp\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|d:\\meocamp\\meocamp\\meocamp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C1F1BEDF-996A-4546-B1D4-81D5F8291134}|MeoCamp\\MeoCamp.API.csproj|solutionrelative:meocamp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC9173A9-AB94-4451-A0CD-27FDC547392C}|MeoCamp.Repository\\MeoCamp.Data.csproj|d:\\meocamp\\meocamp\\meocamp.repository\\models\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -191,38 +235,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MeoCampDBContext.cs",
-              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\MeoCampDBContext.cs",
-              "RelativeDocumentMoniker": "MeoCamp.Repository\\Models\\MeoCampDBContext.cs",
-              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\MeoCampDBContext.cs",
-              "RelativeToolTip": "MeoCamp.Repository\\Models\\MeoCampDBContext.cs",
-              "ViewState": "AQIAAPwAAAAAAAAAAAAAAHYBAAALAAAA",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "MeoCamp\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "MeoCamp\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAA2wFoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T10:20:07.093Z",
+              "WhenOpened": "2024-09-18T08:30:19.169Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "MeoCamp.Repository\\Repositories\\GenericRepository.cs",
-              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "MeoCamp.Repository\\Repositories\\GenericRepository.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAiwBgAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Service\\Services\\UserService.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\UserService.cs",
+              "RelativeToolTip": "MeoCamp.Service\\Services\\UserService.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAIAywDcAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T09:56:23.254Z",
+              "WhenOpened": "2024-09-17T06:59:23.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Service\\Services\\ProductService.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\ProductService.cs",
+              "RelativeToolTip": "MeoCamp.Service\\Services\\ProductService.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAiwDcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T08:12:54.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\Interface\\IProductService.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Service\\Services\\Interface\\IProductService.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\Interface\\IProductService.cs",
+              "RelativeToolTip": "MeoCamp.Service\\Services\\Interface\\IProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T08:12:48.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Repository\\Repositories\\ProductRepository.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "MeoCamp.Repository\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAjwDUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T07:51:15.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "MeoCamp.Repository\\Repositories\\UserRepository.cs",
               "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "MeoCamp.Repository\\Repositories\\UserRepository.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAIA0wB4AAAAYAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAIA0wB0AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T07:21:42.004Z",
               "EditorCaption": ""
@@ -230,58 +313,149 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\User.cs",
-              "RelativeDocumentMoniker": "MeoCamp.Repository\\Models\\User.cs",
-              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\User.cs",
-              "RelativeToolTip": "MeoCamp.Repository\\Models\\User.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\Interface\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Repository\\Repositories\\Interface\\IProductRepository.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\Interface\\IProductRepository.cs",
+              "RelativeToolTip": "MeoCamp.Repository\\Repositories\\Interface\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T07:14:34.866Z",
+              "WhenOpened": "2024-09-18T07:50:15.252Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\Interface\\IUserService.cs",
-              "RelativeDocumentMoniker": "MeoCamp.Service\\Services\\Interface\\IUserService.cs",
-              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\Interface\\IUserService.cs",
-              "RelativeToolTip": "MeoCamp.Service\\Services\\Interface\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "AuthLoginController.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Controllers\\AuthLoginController.cs",
+              "RelativeDocumentMoniker": "MeoCamp\\Controllers\\AuthLoginController.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Controllers\\AuthLoginController.cs",
+              "RelativeToolTip": "MeoCamp\\Controllers\\AuthLoginController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAIAzwDUAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T06:59:29.769Z",
+              "WhenOpened": "2024-09-17T06:58:22.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\ProductModel.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Service\\BusinessModel\\ProductModel.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\ProductModel.cs",
+              "RelativeToolTip": "MeoCamp.Service\\BusinessModel\\ProductModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T08:38:57.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\LoginModel.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Service\\BusinessModel\\LoginModel.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\LoginModel.cs",
+              "RelativeToolTip": "MeoCamp.Service\\BusinessModel\\LoginModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T06:58:10.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateProductModel.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\UpdateProductModel.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Service\\BusinessModel\\UpdateProductModel.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\UpdateProductModel.cs",
+              "RelativeToolTip": "MeoCamp.Service\\BusinessModel\\UpdateProductModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T09:50:40.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\RegisterModel.cs",
               "RelativeDocumentMoniker": "MeoCamp.Service\\BusinessModel\\RegisterModel.cs",
               "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\RegisterModel.cs",
               "RelativeToolTip": "MeoCamp.Service\\BusinessModel\\RegisterModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBUAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T06:58:52.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "MeoCamp\\WeatherForecast.cs",
-              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\WeatherForecast.cs",
-              "RelativeToolTip": "MeoCamp\\WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\User.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Repository\\Models\\User.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\User.cs",
+              "RelativeToolTip": "MeoCamp.Repository\\Models\\User.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T06:58:16.694Z",
+              "WhenOpened": "2024-09-17T07:14:34.866Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Repository\\Models\\Product.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\Product.cs",
+              "RelativeToolTip": "MeoCamp.Repository\\Models\\Product.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAASwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T07:51:50.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MeoCampDBContext.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\MeoCampDBContext.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Repository\\Models\\MeoCampDBContext.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\MeoCampDBContext.cs",
+              "RelativeToolTip": "MeoCamp.Repository\\Models\\MeoCampDBContext.cs",
+              "ViewState": "AQIAAMsAAAAAAAAAAAAAAOIAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T10:20:07.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Program.cs",
+              "RelativeDocumentMoniker": "MeoCamp\\Program.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Program.cs",
+              "RelativeToolTip": "MeoCamp\\Program.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAABUAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T09:58:44.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Repository\\Repositories\\GenericRepository.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "MeoCamp.Repository\\Repositories\\GenericRepository.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAIA0wCkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T09:56:23.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Repositories\\Interface\\IUserRepository.cs",
               "RelativeDocumentMoniker": "MeoCamp.Repository\\Repositories\\Interface\\IUserRepository.cs",
@@ -294,46 +468,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "MeoCamp.Service\\Services\\UserService.cs",
-              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\UserService.cs",
-              "RelativeToolTip": "MeoCamp.Service\\Services\\UserService.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAA2wCUAAABoAAAA",
+              "DocumentIndex": 19,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Repository\\Models\\Category.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\Category.cs",
+              "RelativeToolTip": "MeoCamp.Repository\\Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T06:59:23.986Z",
+              "WhenOpened": "2024-09-18T09:06:48.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthLoginController.cs",
-              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Controllers\\AuthLoginController.cs",
-              "RelativeDocumentMoniker": "MeoCamp\\Controllers\\AuthLoginController.cs",
-              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Controllers\\AuthLoginController.cs",
-              "RelativeToolTip": "MeoCamp\\Controllers\\AuthLoginController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAmwDgAAAARAAAA",
+              "DocumentIndex": 17,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\Interface\\IUserService.cs",
+              "RelativeDocumentMoniker": "MeoCamp.Service\\Services\\Interface\\IUserService.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\Services\\Interface\\IUserService.cs",
+              "RelativeToolTip": "MeoCamp.Service\\Services\\Interface\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T06:58:22.284Z",
+              "WhenOpened": "2024-09-17T06:59:29.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Program.cs",
-              "RelativeDocumentMoniker": "MeoCamp\\Program.cs",
-              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Program.cs",
-              "RelativeToolTip": "MeoCamp\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAABEAAAA",
+              "DocumentIndex": 21,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "MeoCamp\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "MeoCamp\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T09:58:44.223Z",
+              "WhenOpened": "2024-09-18T08:33:06.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "MeoCamp\\WeatherForecast.cs",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\WeatherForecast.cs",
+              "RelativeToolTip": "MeoCamp\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T06:58:16.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\appsettings.json",
+              "RelativeDocumentMoniker": "MeoCamp\\appsettings.json",
+              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\appsettings.json",
+              "RelativeToolTip": "MeoCamp\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-17T10:55:25.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "ShoppingCart.cs",
               "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\ShoppingCart.cs",
               "RelativeDocumentMoniker": "MeoCamp.Repository\\Models\\ShoppingCart.cs",
@@ -341,12 +540,11 @@
               "RelativeToolTip": "MeoCamp.Repository\\Models\\ShoppingCart.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T07:14:45.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T07:14:45.188Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 24,
               "Title": "CartItem.cs",
               "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "MeoCamp.Repository\\Models\\CartItem.cs",
@@ -354,25 +552,11 @@
               "RelativeToolTip": "MeoCamp.Repository\\Models\\CartItem.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T09:57:39.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T09:57:39.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\LoginModel.cs",
-              "RelativeDocumentMoniker": "MeoCamp.Service\\BusinessModel\\LoginModel.cs",
-              "ToolTip": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\BusinessModel\\LoginModel.cs",
-              "RelativeToolTip": "MeoCamp.Service\\BusinessModel\\LoginModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T06:58:10.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 25,
               "Title": "Revenue.cs",
               "DocumentMoniker": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\Models\\Revenue.cs",
               "RelativeDocumentMoniker": "MeoCamp.Repository\\Models\\Revenue.cs",

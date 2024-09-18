@@ -200,7 +200,7 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("products");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.CategoryId).HasColumnName("category_id");
             entity.Property(e => e.CreatedAt)
@@ -211,22 +211,29 @@ public partial class MeoCampDBContext : DbContext
                 .HasColumnName("description");
             entity.Property(e => e.IsRentable).HasColumnName("is_rentable");
             entity.Property(e => e.Price)
-                .HasColumnType("decimal(18, 2)")
-                .HasColumnName("price");
+        .HasColumnType("float") // or you can omit .HasColumnType() since 'double' is inferred as 'float'
+        .HasColumnName("price");
             entity.Property(e => e.ProductName)
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("product_name");
             entity.Property(e => e.RentalPrice)
-                .HasColumnType("decimal(18, 2)")
-                .HasColumnName("rental_price");
+        .HasColumnType("float") // or omit this if inferred from the 'double' type in your model
+        .HasColumnName("rental_price");
             entity.Property(e => e.Status)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("status");
+    .HasColumnType("bit") // Set the column type to bit
+    .HasColumnName("status");
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("updated_at");
+
+            entity.HasOne(d => d.Category).WithMany(p => p.Products)
+                .HasForeignKey(d => d.CategoryId)
+                .HasConstraintName("FK__products__catego__29572725");
+
+            entity.Property(e => e.Image)
+       .HasColumnType("nvarchar(MAX)")
+       .HasColumnName("image");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
@@ -360,9 +367,8 @@ public partial class MeoCampDBContext : DbContext
                 .HasColumnName("role");
 
             entity.Property(e => e.Status)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("status");
+      .HasColumnType("bit") // Updated for bit data type
+      .HasColumnName("status");
 
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
