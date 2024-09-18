@@ -29,6 +29,12 @@ namespace MeoCamp.Data.Repositories
             return user;
         }
 
+        public async Task<User?> GetUserByFullnameAsync(string fullname)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Fullname == fullname);
+            return user;
+        }
+
         public async Task<User> Register(User user)
         {
             _context.Users.Add(user);

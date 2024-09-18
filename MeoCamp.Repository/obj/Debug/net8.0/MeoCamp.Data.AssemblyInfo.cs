@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeoCamp.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c79b8b87915a5085b128168f43cab625c43b7fc0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a98201e4d7b1ea825b8e48b8135948479c4be1ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeoCamp.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeoCamp.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

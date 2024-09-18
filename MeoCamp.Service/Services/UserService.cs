@@ -26,20 +26,23 @@ namespace MeoCamp.Service.Services
             _genericRepo ??= new GenericRepository<User>();
         }
 
-        public async Task<bool> ChangePassword(string username, string password)
+        public async Task<bool> ChangePassword(string username, string password, string confirmpassword)
         {
             // Kiểm tra xem người dùng đã tồn tại hay chưa
             var existingUser = await _userRepository.GetUserByUsernameAsync(username);
             if (existingUser == null)
             {
-                throw new KeyNotFoundException("Người dùng chưa tồn tại");
+                throw new Exception("Người dùng chưa tồn tại");
+            }else if (password != confirmpassword)//kiểm tra pass mới
+            {
+                throw new Exception("Mật khẩu và xác nhận không khớp");
             }else if (existingUser.Password == password)//thay đổi phải khác mk cũ
             {
                 throw new Exception("Mật khẩu này đang sử dụng");
             }
             // cập nhật mk mới
             existingUser.Password = password;
-            await _userRepository.UpdateProfile(existingUser); 
+            await _userRepository.UpdateProfile(existingUser);
             return true;
         }
 
@@ -49,7 +52,8 @@ namespace MeoCamp.Service.Services
             var existingUser = await _userRepository.GetUserByUsernameAsync(username);
             if (existingUser == null)
             {
-                throw new KeyNotFoundException("Người dùng chưa tồn tại");
+                // throw new KeyNotFoundException("Người dùng chưa tồn tại");
+                return false;
             }
             // cập nhật role mới
             existingUser.Role = role;
@@ -71,7 +75,8 @@ namespace MeoCamp.Service.Services
             var existingUser = await _userRepository.GetUserByUsernameAsync(model.Username);
             if (existingUser != null)
             {
-                throw new KeyNotFoundException("Người dùng này đã tồn tại");
+                // throw new KeyNotFoundException("Người dùng này đã tồn tại");
+                return false;
             }
 
             var newUser = new User
@@ -98,14 +103,24 @@ namespace MeoCamp.Service.Services
             var existingUser = await _userRepository.GetUserByUsernameAsync(username);
             if (existingUser == null)
             {
-                throw new KeyNotFoundException("Người dùng chưa tồn tại");
+                // throw new KeyNotFoundException("Người dùng chưa tồn tại");
+                return false;
             }
             // cập nhật theo ý người nhập
-            existingUser.Fullname = profile.Fullname;
-            existingUser.PhoneNumber = profile.PhoneNumber;
-            existingUser.Address = profile.Address;
-            existingUser.Email = profile.Email;
+            if (profile.Fullname != null && profile.Fullname != ""){
+                existingUser.Fullname = profile.Fullname;
+            }
+            if (profile.PhoneNumber != null && profile.PhoneNumber != ""){
+                existingUser.PhoneNumber = profile.PhoneNumber;
+            }
+            if (profile.Address != null && profile.Address != ""){
+                existingUser.Address = profile.Address;
+            }
+            if (profile.Email != null && profile.Email != ""){
+                existingUser.Email = profile.Email;
+            }
             // cập nhật vào db
+            existingUser.UpdatedAt = DateTime.Now;
             await _userRepository.UpdateProfile(existingUser);
             return true;
         }
@@ -114,32 +129,18 @@ namespace MeoCamp.Service.Services
         {
             // Kiểm tra xem có người dùng đã tồn tại hay chưa
             var listuser = await _userRepository.GetAllUserAsync();
-            if (listuser == null)
-            {
-                throw new KeyNotFoundException("Chưa có người dùng tồn tại");
-            }
+            // if (listuser == null)
+            // {
+            //     throw new KeyNotFoundException("Chưa có người dùng tồn tại");
+            // }
             return listuser;
         }
 
-        public async Task<User> ViewProfilebyUsername(string username)
+        public async Task<User> ViewProfilebyfullname(string fullname)
         {
             // Kiểm tra xem người dùng đã tồn tại hay chưa
-            var existingUser = await _userRepository.GetUserByUsernameAsync(username);
-            if (existingUser == null)
-            {
-                throw new KeyNotFoundException("Người dùng chưa tồn tại");
-            }
-            // kiểm soát dữ liệu trả về
-            var returnUser = new User
-            {
-                Fullname = existingUser.Fullname,
-                PhoneNumber = existingUser.PhoneNumber,
-                Address = existingUser.Address,
-                Email = existingUser.Email,
-                CreatedAt = existingUser.CreatedAt,
-            };
-            
-            return returnUser;
+            var existingUser = await _userRepository.GetUserByFullnameAsync(fullname);
+            return existingUser;
         }
     }
 }

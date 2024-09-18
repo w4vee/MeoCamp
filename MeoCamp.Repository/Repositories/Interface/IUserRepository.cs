@@ -13,6 +13,7 @@ namespace MeoCamp.Data.Repositories.Interface
     {
         public Task<List<User>> GetAllUserAsync();
         public Task<User?> GetUserByUsernameAsync(string username);
+        public Task<User?> GetUserByFullnameAsync(string fullname);
         public Task<User> Register(User user);
         public Task<User> UpdateProfile(User user);
 

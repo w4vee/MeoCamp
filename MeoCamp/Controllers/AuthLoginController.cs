@@ -39,7 +39,7 @@ namespace MeoCamp.API.Controllers
             else
             {
                 // Login failed
-                return BadRequest("Invalid username or password");
+                return BadRequest("username hoặc password có thể sai");
             }
         }
 
@@ -51,31 +51,68 @@ namespace MeoCamp.API.Controllers
                 var result = await _userService.Register(model);
                 if (result)
                 {
-                    return Ok("User registered successfully.");
+                    // đăng kí thành công
+                    return Ok("đăng kí thành công.");
                 }
                 else
                 {
-                    return BadRequest("Username already exists.");
+                    // đăng kí không thành công
+                    return BadRequest("Username đã tồn tại.");
                 }
             }
             return BadRequest("Invalid data.");
         }
-        [HttpPost("listuser")]
+
+        [HttpPost("changePassword/{username}")]
+        public async Task<IActionResult> ChangePassword(string username, string PW,  String confirmPW)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _userService.ChangePassword(username, PW, confirmPW);
+                if (result)
+                {
+                    // cập nhật mk thành công
+                    return Ok("Cập nhật mật khẩu thành công.");
+                }
+                else
+                {
+                    return BadRequest("Username không tồn tại.");
+                }
+            }
+            return BadRequest("Invalid data.");
+        }
+
+        [HttpPost("listUser")]
         public async Task<IActionResult> GetAll()
         {
             var result = await _userService.ViewListUser();
             if (result != null)
             {
-                // Login successful
+                // lấy list thành công
                 return Ok(result);
             }
             else
             {
-                // Login failed
-                return BadRequest("List is empty");
+                // lấy list failed
+                return BadRequest("List rỗng.");
             }
         }
 
+        [HttpPost("findUser")]
+        public async Task<IActionResult> GetUserbyFullname(string fullname)
+        {
+            var result = await _userService.ViewProfilebyfullname(fullname);
+            if (result != null)
+            {
+                // Find successful
+                return Ok(result);
+            }
+            else
+            {
+                // Find failed
+                return BadRequest("fullname này không tồn tại hoặc sai.");
+            }
+        }
         [HttpPost("UpdateProfile/{username}")]
         public async Task<IActionResult> UpdateProfile(String username, ProfileModel model)
         {
@@ -84,11 +121,12 @@ namespace MeoCamp.API.Controllers
                 var result = await _userService.UpdateProfile(username, model);
                 if (result)
                 {
-                    return Ok("User updated successfully.");
+                    //cập nhật thành công
+                    return Ok("Cập nhật profile thành công.");
                 }
                 else
                 {
-                    return BadRequest("Username not exists.");
+                    return BadRequest("Username không tồn tại.");
                 }
             }
             return BadRequest("Invalid data.");
