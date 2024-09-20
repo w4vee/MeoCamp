@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n0vd5hr6ehQ=",
+  "dgSpecHash": "f9BAjWs8U98=",
   "success": true,
-  "projectFilePath": "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp\\MeoCamp.API.csproj",
+  "projectFilePath": "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp\\MeoCamp.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lemon\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Lemon\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

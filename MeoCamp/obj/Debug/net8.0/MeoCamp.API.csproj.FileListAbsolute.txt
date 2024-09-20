@@ -74,3 +74,9 @@ d:\Education\EXE201\MeoCamp_fork\MeoCamp\obj\Debug\net8.0\MeoCamp.API.pdb
 d:\Education\EXE201\MeoCamp_fork\MeoCamp\obj\Debug\net8.0\MeoCamp.API.genruntimeconfig.cache
 d:\Education\EXE201\MeoCamp_fork\MeoCamp\obj\Debug\net8.0\ref\MeoCamp.API.dll
 d:\Education\EXE201\MeoCamp_fork\MeoCamp\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp\bin\Debug\net8.0\System.Web.Cors.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp\bin\Debug\net8.0\System.Web.Http.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp\bin\Debug\net8.0\System.Web.Http.Cors.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp\bin\Debug\net8.0\Newtonsoft.Json.dll
+d:\Education\EXE201\MeoCamp_fork\MeoCamp\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj": {}
+    "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj": {}
   },
   "projects": {
-    "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
+    "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj",
+        "projectUniqueName": "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj",
         "projectName": "MeoCamp.Data",
-        "projectPath": "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj",
+        "projectPath": "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj",
         "packagesPath": "C:\\Users\\Lemon\\.nuget\\packages\\",
-        "outputPath": "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\obj\\",
+        "outputPath": "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lemon\\AppData\\Roaming\\NuGet\\NuGet.Config",
