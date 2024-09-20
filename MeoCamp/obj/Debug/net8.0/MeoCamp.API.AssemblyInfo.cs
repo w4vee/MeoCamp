@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeoCamp.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56c0915c42d321da2940c72a64f270699fc0f4db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68e5c9c877e004e01519d131961ca3a80c0c5fe5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeoCamp.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeoCamp.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -88,7 +88,7 @@ namespace MeoCamp.Service.Services
                 Password = model.Password,
                 Email = model.Email,
                 CreatedAt = DateTime.Now,
-                Status = "Active", // Có thể để trạng thái mặc định là Active
+                Status = true, 
                 Role = "User"      // Mặc định là User
             };
 
