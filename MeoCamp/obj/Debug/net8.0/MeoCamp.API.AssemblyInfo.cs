@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeoCamp.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00c184ecd0d8c878ed18f2992ef088d41996f516")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7e33f16b4176fd82e2be2941ff8924a61b4b77a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeoCamp.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeoCamp.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
