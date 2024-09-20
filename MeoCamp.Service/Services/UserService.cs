@@ -42,6 +42,7 @@ namespace MeoCamp.Service.Services
             }
             // cập nhật mk mới
             existingUser.Password = password;
+            existingUser.UpdatedAt = DateTime.Now;
             await _userRepository.UpdateProfile(existingUser);
             return true;
         }
@@ -57,6 +58,7 @@ namespace MeoCamp.Service.Services
             }
             // cập nhật role mới
             existingUser.Role = role;
+            existingUser.UpdatedAt = DateTime.Now;
             await _userRepository.UpdateProfile(existingUser); 
             return true;
         }

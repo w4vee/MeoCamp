@@ -1,0 +1,5 @@
+D:\Education\EXE201\MeoCamp_fork\obj\Debug\net8.0\MeoCamp_fork.GeneratedMSBuildEditorConfig.editorconfig
+D:\Education\EXE201\MeoCamp_fork\obj\Debug\net8.0\MeoCamp_fork.AssemblyInfoInputs.cache
+D:\Education\EXE201\MeoCamp_fork\obj\Debug\net8.0\MeoCamp_fork.AssemblyInfo.cs
+D:\Education\EXE201\MeoCamp_fork\obj\Debug\net8.0\MeoCamp_fork.csproj.CoreCompileInputs.cache
+D:\Education\EXE201\MeoCamp_fork\obj\Debug\net8.0\MeoCamp_fork.sourcelink.json

@@ -2488,11 +2488,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Service\\MeoCamp.Service.csproj",
+      "projectUniqueName": "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Service\\MeoCamp.Service.csproj",
       "projectName": "MeoCamp.Service",
-      "projectPath": "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Service\\MeoCamp.Service.csproj",
+      "projectPath": "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Service\\MeoCamp.Service.csproj",
       "packagesPath": "C:\\Users\\Lemon\\.nuget\\packages\\",
-      "outputPath": "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Service\\obj\\",
+      "outputPath": "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lemon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2510,8 +2510,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
-              "projectPath": "d:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj"
+            "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
+              "projectPath": "D:\\Education\\EXE201\\MeoCamp_fork\\MeoCamp.Repository\\MeoCamp.Data.csproj"
             }
           }
         }
