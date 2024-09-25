@@ -27,7 +27,7 @@ namespace MeoCamp.API.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _productService.AddNewProduct(product.ProductName, product.Description, product.Price, product.RentalPrice, product.IsRentable, product.CategoryId, product.Status, product.Image);
+                var result = await _productService.AddNewProduct(product.ProductName, product.Description, product.Price, product.RentalPrice, product.IsRentable, product.CategoryId, product.Status, product.Image, product.Quantity, product.Rate);
 
                 if (result != null)
                 {
@@ -87,6 +87,20 @@ namespace MeoCamp.API.Controllers
             {
                 return Ok("Fail");
             }
+        }
+
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Product>> GetProduct(int id)
+        {
+            var product = await _productService.GetProductById(id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return product;
         }
     }
 }

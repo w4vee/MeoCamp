@@ -104,7 +104,7 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("orders");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
@@ -234,6 +234,12 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.Image)
        .HasColumnType("nvarchar(MAX)")
        .HasColumnName("image");
+            entity.Property(e => e.Quantity)
+       .HasColumnType("int")
+       .HasColumnName("quantity");
+            entity.Property(e => e.Rate)
+       .HasColumnType("float")
+       .HasColumnName("rate");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)

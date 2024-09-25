@@ -22,7 +22,7 @@ namespace MeoCamp.Service.Services
             _genericRepo = genericRepo;
         }
 
-        public async Task<Product> AddNewProduct(string name, string description, double? price, double? rentalprice, bool? isrentable, int? categoryId, bool? status, string image)
+        public async Task<Product> AddNewProduct(string name, string description, double? price, double? rentalprice, bool? isrentable, int? categoryId, bool? status, string image, int quantity, double rate)
         {
             
             Product newProduct = new Product
@@ -35,6 +35,8 @@ namespace MeoCamp.Service.Services
                 CategoryId = categoryId,
                 Status = status,
                 Image = image,
+                Quantity = quantity,
+                Rate = rate,
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now
             };
@@ -46,7 +48,12 @@ namespace MeoCamp.Service.Services
 
         public async Task<IEnumerable<Product>> GetAllProductsAsync()
         {
-            return await _productRepository.GetAllProducts();
+            return await _genericRepo.GetAllAsync();
+        }
+
+        public Task<Product> GetProductById(int id)
+        {
+            return _genericRepo.GetByIdAsync(id);
         }
 
         public async Task<int> SoftDeleteProduct(int id)
@@ -69,15 +76,17 @@ namespace MeoCamp.Service.Services
                 existingProduct.Description = product.Description;
                 existingProduct.RentalPrice = product.RentalPrice;
                 existingProduct.IsRentable = product.IsRentable;
-                existingProduct.UpdatedAt = DateTime.Now; // Giả sử bạn muốn cập nhật thời gian này
+                existingProduct.UpdatedAt = DateTime.Now;
                 existingProduct.Status = product.Status;
+                existingProduct.Quantity = product.Quantity;
+                existingProduct.Rate = product.Rate;
                 await _productRepository.UpdateProduct(existingProduct);
                 return true;
             }
             catch (Exception ex)
             {
                 // Log the exception
-                throw new Exception("Xảy ra lỗi khi cập nhật nhà xe");
+                throw new Exception("Error");
                 return false;
             }
         }

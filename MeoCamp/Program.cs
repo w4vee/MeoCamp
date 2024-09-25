@@ -29,10 +29,12 @@ namespace MeoCamp
 
             // Add services to the container.
             builder.Services.AddScoped<GenericRepository<Product>>();
+            builder.Services.AddScoped<GenericRepository<Order>>();
             builder.Services.AddScoped<UserRepository>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ProductRepository>();
             builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
             builder.Services.AddControllers();
 
 

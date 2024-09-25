@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MeoCamp.Data.Repositories
 {
     public class ProductRepository : IProductRepository
@@ -68,6 +69,9 @@ namespace MeoCamp.Data.Repositories
                 existingProduct.IsRentable = product.IsRentable;
                 existingProduct.UpdatedAt = product.UpdatedAt;
                 existingProduct.Status = product.Status;
+                existingProduct.Image = product.Image;
+                existingProduct.Quantity = product.Quantity;
+                existingProduct.Rate = product.Rate;
 
                 await _context.SaveChangesAsync();
             }
