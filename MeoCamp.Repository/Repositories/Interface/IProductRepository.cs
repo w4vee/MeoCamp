@@ -15,5 +15,6 @@ namespace MeoCamp.Data.Repositories.Interface
         public Task<int> SoftDeleteProduct(int id);
         public Task<Product> GetProductById(int id);
         public Task<IEnumerable<Product>> GetAllProducts();
+        public Task<double?> GetPriceById(int id);
     }
 }

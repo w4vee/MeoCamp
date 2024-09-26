@@ -15,5 +15,9 @@ namespace MeoCamp.Service.Services.Interface
         public Task<IEnumerable<Order>> GetAllOrdersAsync();
 
         public Task<Order> GetOrderById(int id);
+
+        public Task<bool> ProcessPayment(int customerId);
+
+        public Task<bool> Checkout(int customerId, string paymentMethod, int amount);
     }
 }

@@ -2,11 +2,13 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MeoCamp.Repository.Models;
 
 public partial class OrderDetail
 {
+    [Key]
     public int Id { get; set; }
 
     public int? OrderId { get; set; }
@@ -15,9 +17,9 @@ public partial class OrderDetail
 
     public int? Quantity { get; set; }
 
-    public decimal? UnitPrice { get; set; }
+    public int? UnitPrice { get; set; }
 
-    public decimal? TotalPrice { get; set; }
+    public int? TotalPrice { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 

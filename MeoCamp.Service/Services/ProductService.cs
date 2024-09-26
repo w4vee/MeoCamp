@@ -1,4 +1,5 @@
 ﻿using MeoCamp.Data.Repositories;
+using MeoCamp.Data.Repositories.Interface;
 using MeoCamp.Repository;
 using MeoCamp.Repository.Models;
 using MeoCamp.Service.BusinessModel;
@@ -13,10 +14,10 @@ namespace MeoCamp.Service.Services
 {
     public class ProductService : IProductService
     {
-        private readonly ProductRepository _productRepository;
+        private readonly IProductRepository _productRepository;
         private readonly GenericRepository<Product> _genericRepo;
 
-        public ProductService(ProductRepository productRepository, GenericRepository<Product> genericRepo)
+        public ProductService(IProductRepository productRepository, GenericRepository<Product> genericRepo)
         {
             _productRepository = productRepository;
             _genericRepo = genericRepo;

@@ -23,6 +23,19 @@ namespace MeoCamp.API.Controllers
             _orderService = orderService;
         }
 
+
+        [HttpPost("checkout")]
+        public async Task<IActionResult> Checkout(int customerId, string paymentMethod, int amount)
+        {
+            bool result = await _orderService.Checkout(customerId, paymentMethod, amount);
+
+            if (result)
+            {
+                return Ok("Thanh toán thành công.");
+            }
+            return BadRequest("Không thể thanh toán.");
+        }
+
         // GET: api/Orders
         [HttpGet]
         public async Task<IActionResult> GetOrders()

@@ -17,7 +17,7 @@ public partial class Rental
 
     public DateTime? RentalEndDate { get; set; }
 
-    public decimal? TotalPrice { get; set; }
+    public int? TotalPrice { get; set; }
 
     public string RentalStatus { get; set; }
 
