@@ -20,6 +20,14 @@ namespace MeoCamp.Data.Repositories
             _context = context;
         }
 
+        public async Task RemoveAllCartItems(ShoppingCart cart)
+        {
+            _context.CartItems.RemoveRange(cart.CartItems); // Xóa tất cả CartItem
+            cart.CartItems.Clear(); // Làm sạch danh sách CartItems trong giỏ hàng (tùy chọn)
+            await _context.SaveChangesAsync(); // Lưu thay đổi vào cơ sở dữ liệu
+        }
+
+
         public async Task<ShoppingCart> ClearCart(ShoppingCart cart)
         {
             cart.CartItems.Clear();
@@ -27,6 +35,7 @@ namespace MeoCamp.Data.Repositories
             await _context.SaveChangesAsync();
             return cart; 
         }
+
 
         public async Task<ShoppingCart> GetCartByUserId(int id)
         {

@@ -1,5 +1,6 @@
 ﻿using MeoCamp.Data.Repositories.Interface;
 using MeoCamp.Repository.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,15 @@ namespace MeoCamp.Data.Repositories
             return await _context.Products.ToListAsync();
         }
 
+        public async Task<double?> GetPriceById(int id)
+        {
+            var price = await _context.Products
+                .Where(p => p.Id == id)
+                .Select(p => p.Price) // Lấy giá
+                .FirstOrDefaultAsync();
+
+            return price; // Trả về giá
+        }
 
         public async Task<Product> GetProductById(int id)
         {

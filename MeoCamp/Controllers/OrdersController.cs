@@ -25,9 +25,9 @@ namespace MeoCamp.API.Controllers
 
 
         [HttpPost("checkout")]
-        public async Task<IActionResult> Checkout(int customerId)
+        public async Task<IActionResult> Checkout(int customerId, string paymentMethod, int amount)
         {
-            bool result = await _orderService.ProcessPayment(customerId);
+            bool result = await _orderService.Checkout(customerId, paymentMethod, amount);
 
             if (result)
             {

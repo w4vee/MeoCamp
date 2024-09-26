@@ -44,6 +44,7 @@ namespace MeoCamp
             builder.Services.AddScoped<GenericRepository<Product>>();
             builder.Services.AddScoped<GenericRepository<Order>>();
             builder.Services.AddScoped<GenericRepository<ShoppingCart>>();
+            builder.Services.AddScoped<GenericRepository<Payment>>();
 
             builder.Services.AddControllers();
             builder.Services.AddAuthorization();
