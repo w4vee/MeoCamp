@@ -17,10 +17,10 @@ namespace MeoCamp.Service.Services
 
     public class UserService : IUserService
     {
-        private readonly UserRepository _userRepository;
+        private readonly IUserRepository _userRepository;
         private readonly GenericRepository<User> _genericRepo;
 
-        public UserService(UserRepository userRepository)
+        public UserService(IUserRepository userRepository)
         {
             _userRepository = userRepository;
             _genericRepo ??= new GenericRepository<User>();

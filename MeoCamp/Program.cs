@@ -28,16 +28,26 @@ namespace MeoCamp
             });
 
             // Add services to the container.
-            builder.Services.AddScoped<GenericRepository<Product>>();
-            builder.Services.AddScoped<GenericRepository<Order>>();
-            builder.Services.AddScoped<UserRepository>();
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+
+            // Registering Services with their interfaces
             builder.Services.AddScoped<IUserService, UserService>();
-            builder.Services.AddScoped<ProductRepository>();
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IOrderService, OrderService>();
+            builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>();
+
+            // Add generic repository if needed
+            builder.Services.AddScoped<GenericRepository<Product>>();
+            builder.Services.AddScoped<GenericRepository<Order>>();
+            builder.Services.AddScoped<GenericRepository<ShoppingCart>>();
+
             builder.Services.AddControllers();
-
-
+            builder.Services.AddAuthorization();
+            builder.Services.AddAuthentication();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

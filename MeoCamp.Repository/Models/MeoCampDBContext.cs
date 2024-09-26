@@ -61,7 +61,7 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("cart_items");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.AddedAt)
                 .HasColumnType("datetime")
@@ -118,7 +118,7 @@ public partial class MeoCampDBContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("order_status");
             entity.Property(e => e.TotalAmount)
-                .HasColumnType("decimal(18, 2)")
+                .HasColumnType("int")
                 .HasColumnName("total_amount");
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
@@ -136,7 +136,7 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("order_details");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
@@ -145,10 +145,10 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.ProductId).HasColumnName("product_id");
             entity.Property(e => e.Quantity).HasColumnName("quantity");
             entity.Property(e => e.TotalPrice)
-                .HasColumnType("decimal(18, 2)")
+                .HasColumnType("int")
                 .HasColumnName("total_price");
             entity.Property(e => e.UnitPrice)
-                .HasColumnType("decimal(18, 2)")
+                .HasColumnType("int")
                 .HasColumnName("unit_price");
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
@@ -170,10 +170,10 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("payments");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.Amount)
-                .HasColumnType("decimal(18, 2)")
+                .HasColumnType("int")
                 .HasColumnName("amount");
             entity.Property(e => e.OrderId).HasColumnName("order_id");
             entity.Property(e => e.PaymentDate)
@@ -253,7 +253,7 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("rentals");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
@@ -271,7 +271,7 @@ public partial class MeoCampDBContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("rental_status");
             entity.Property(e => e.TotalPrice)
-                .HasColumnType("decimal(18, 2)")
+                .HasColumnType("int")
                 .HasColumnName("total_price");
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
@@ -293,7 +293,7 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("revenue");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
@@ -311,7 +311,7 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("shopping_carts");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
