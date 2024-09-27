@@ -27,7 +27,7 @@ namespace MeoCamp.Service.BusinessModel
 
         public bool? Status { get; set; }
 
-        public string Image { get; set; }
+        public ICollection<string> Images { get; set; } = new List<string>();
 
         public int Quantity { get; set; }
 
