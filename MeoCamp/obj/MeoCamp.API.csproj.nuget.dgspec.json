@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MeoCamp\\MeoCamp\\MeoCamp\\MeoCamp.API.csproj": {}
+    "D:\\Education\\EXE201\\MeoCamp\\MeoCamp\\MeoCamp.API.csproj": {}
   },
   "projects": {
-    "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
+    "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj",
+        "projectUniqueName": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj",
         "projectName": "MeoCamp.Data",
-        "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\obj\\",
+        "projectPath": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Repository\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -94,25 +91,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj": {
+    "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj",
+        "projectUniqueName": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj",
         "projectName": "MeoCamp.Service",
-        "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\obj\\",
+        "projectPath": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -120,14 +113,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
-                "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj"
+              "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj": {
+                "projectPath": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Repository\\MeoCamp.Data.csproj"
               }
             }
           }
@@ -162,25 +156,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\MeoCamp\\MeoCamp\\MeoCamp\\MeoCamp.API.csproj": {
+    "D:\\Education\\EXE201\\MeoCamp\\MeoCamp\\MeoCamp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\MeoCamp.API.csproj",
+        "projectUniqueName": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp\\MeoCamp.API.csproj",
         "projectName": "MeoCamp.API",
-        "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\MeoCamp.API.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp\\obj\\",
+        "projectPath": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp\\MeoCamp.API.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -188,14 +178,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj": {
-                "projectPath": "D:\\MeoCamp\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj"
+              "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj": {
+                "projectPath": "D:\\Education\\EXE201\\MeoCamp\\MeoCamp.Service\\MeoCamp.Service.csproj"
               }
             }
           }
@@ -253,7 +244,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

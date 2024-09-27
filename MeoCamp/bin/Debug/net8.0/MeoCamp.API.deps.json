@@ -1938,12 +1938,6 @@
       "System.Text.Json/8.0.4": {
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/System.Text.Json.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.724.31311"
-          }
         }
       },
       "System.Threading.Channels/7.0.0": {},
@@ -1976,7 +1970,10 @@
           "System.IdentityModel.Tokens.Jwt": "8.0.2"
         },
         "runtime": {
-          "MeoCamp.Data.dll": {}
+          "MeoCamp.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "MeoCamp.Service/1.0.0": {
@@ -1984,7 +1981,10 @@
           "MeoCamp.Data": "1.0.0"
         },
         "runtime": {
-          "MeoCamp.Service.dll": {}
+          "MeoCamp.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
