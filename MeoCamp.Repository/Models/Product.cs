@@ -27,8 +27,8 @@ public partial class Product
 
     public bool? Status { get; set; }
 
-    public string Image { get; set; }
-    
+    public List<string> Image { get; set; } // Danh sách hình ảnh
+
     public int Quantity { get; set; }
 
     public double Rate { get; set; }
