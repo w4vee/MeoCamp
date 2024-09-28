@@ -11,6 +11,7 @@ namespace MeoCamp.Data.Repositories.Interface
     public interface IUserRepository
     {
         public Task<List<User>> GetAllUserAsync();
+        public Task<User> GetUserByUserIdAsync(int userId);
         public Task<User?> GetUserByUsernameAsync(string username);
         public Task<User?> GetUserByFullnameAsync(string fullname);
         public Task<User> Register(User user);

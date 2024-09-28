@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using MeoCamp.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -21,6 +22,7 @@ public partial class MeoCampDBContext : DbContext
     public virtual DbSet<CartItem> CartItems { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
+    public virtual DbSet<Feedback> Feedback { get; set; }
 
     public virtual DbSet<Order> Orders { get; set; }
 
@@ -95,6 +97,24 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.Description)
                 .HasColumnType("text")
                 .HasColumnName("description");
+        });
+
+        modelBuilder.Entity<Feedback>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Feedback__3213E83F86CF20DF");
+            entity.ToTable("Feedbacks");
+            entity.Property(e => e.Id)
+            .ValueGeneratedOnAdd()
+            .HasColumnName("id");
+            entity.Property(e => e.CustomerId)
+            .HasColumnType("int")
+            .HasColumnName("user_id");
+            entity.Property(e => e.Description)
+            .HasColumnType("nvarchar(MAX)")
+            .HasColumnName("description");
+            entity.Property(e => e.Rate)
+            .HasColumnType("int")
+            .HasColumnName("rate");
         });
 
         modelBuilder.Entity<Order>(entity =>
@@ -336,7 +356,7 @@ public partial class MeoCampDBContext : DbContext
 
             entity.Property(e => e.Id)
                 .ValueGeneratedOnAdd() // Thay đổi từ ValueGeneratedNever() sang ValueGeneratedOnAdd()
-                .HasColumnName("id");
+                .HasColumnName("Id");
 
             entity.Property(e => e.Address)
                 .HasMaxLength(255)
