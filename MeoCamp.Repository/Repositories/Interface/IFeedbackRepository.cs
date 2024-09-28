@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MeoCamp.Data.Repositories.Interface
 {
-    public interface IFeedbackRepository
+    public interface IFeedbackRepsitory
     {
         public Task<List<Feedback>> GetAllFeedbackAsync();
         public Task<Feedback> GetFeedbackbyUserIdAsync(int userId);

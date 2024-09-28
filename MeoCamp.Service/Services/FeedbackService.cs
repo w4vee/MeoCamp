@@ -17,10 +17,10 @@ namespace MeoCamp.Service.Services
     public class FeedbackService : IFeedbackService
     {
         private readonly IUserRepository _userRepository;
-        private readonly IFeedbackRepository _feedbackRepository;
+        private readonly IFeedbackRepsitory _feedbackRepository;
         GenericRepository<Feedback> _genericRepo;
 
-        public FeedbackService(IFeedbackRepository feedbackRepository)
+        public FeedbackService(IFeedbackRepsitory feedbackRepository)
         {
             _feedbackRepository = feedbackRepository;
             _genericRepo ??= new GenericRepository<Feedback>();
@@ -69,7 +69,8 @@ namespace MeoCamp.Service.Services
         // tra list feedback
         public async Task<List<Feedback>> GetAllFeedbackAsync()
         {
-            return await _feedbackRepository.GetAllFeedbackAsync();
+            var List = await _feedbackRepository.GetAllFeedbackAsync();
+            return List;
         }
 
         // tim chu nhan cua feedback

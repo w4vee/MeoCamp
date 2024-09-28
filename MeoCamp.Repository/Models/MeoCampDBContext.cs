@@ -22,7 +22,8 @@ public partial class MeoCampDBContext : DbContext
     public virtual DbSet<CartItem> CartItems { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
-    public virtual DbSet<Feedback> Feedback { get; set; }
+    public virtual DbSet<Feedback> Feedbacks { get; set; }
+    public virtual DbSet<Blog> Blogs { get; set; }
 
     public virtual DbSet<Order> Orders { get; set; }
 
@@ -115,6 +116,30 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.Rate)
             .HasColumnType("int")
             .HasColumnName("rate");
+        });
+
+        modelBuilder.Entity<Blog>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Blog__3213E83F86CF20DF");
+            entity.ToTable("Blogs");
+            entity.Property(e => e.Id)
+            .ValueGeneratedOnAdd()
+            .HasColumnName("blog_id");
+            entity.Property(e => e.CustomerId)
+            .HasColumnType("int")
+            .HasColumnName("user_id");
+            entity.Property(e => e.Title)
+            .HasColumnType("nvarchar(255)")
+            .HasColumnName("title");
+            entity.Property(e => e.Content)
+            .HasColumnType("nvarchar(MAX)")
+            .HasColumnName("content");
+            entity.Property(e => e.Post_date)
+                .HasColumnType("datetime")
+                .HasColumnName("post_date");
+            entity.Property(e => e.Image)
+            .HasColumnType("nvarchar(MAX)")
+            .HasColumnName("image");
         });
 
         modelBuilder.Entity<Order>(entity =>
