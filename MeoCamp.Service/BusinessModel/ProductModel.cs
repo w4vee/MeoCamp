@@ -32,5 +32,7 @@ namespace MeoCamp.Service.BusinessModel
         public int Quantity { get; set; }
 
         public double Rate { get; set; }
+
+        public string Subcate { get; set; }
     }
 }

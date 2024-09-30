@@ -30,7 +30,7 @@ namespace MeoCamp.API.Controllers
             var imagesList = product.Images.ToList();
             if (ModelState.IsValid)
             {
-                var result = await _productService.AddNewProduct(product.ProductName, product.Description, product.Price, product.RentalPrice, product.IsRentable, product.CategoryId, product.Status, imagesList, product.Quantity, product.Rate);
+                var result = await _productService.AddNewProduct(product.ProductName, product.Description, product.Price, product.RentalPrice, product.IsRentable, product.CategoryId, product.Status, imagesList, product.Quantity, product.Rate, product.Subcate);
 
                 if (result != null)
                 {
@@ -69,10 +69,11 @@ namespace MeoCamp.API.Controllers
                 Images = product.Image, // Trả về trực tiếp danh sách hình ảnh
                 product.Quantity,
                 product.Rate,
-                product.CartItems,
-                product.Category,
-                product.OrderDetails,
-                product.Rentals
+                //product.CartItems,
+                //product.Category,
+                //product.OrderDetails,
+                product.Rentals,
+                product.Subcate
             }).ToList();
 
             return Ok(productDtos);
@@ -145,10 +146,11 @@ namespace MeoCamp.API.Controllers
                 Images = product.Image, 
                 product.Quantity,
                 product.Rate,
-                product.CartItems,
-                product.Category,
-                product.OrderDetails,
-                product.Rentals
+                //product.CartItems,
+                //product.Category,
+                //product.OrderDetails,
+                product.Rentals,
+                product.Subcate
             };
 
             return Ok(productDto);
