@@ -240,6 +240,10 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.Rate)
        .HasColumnType("float")
        .HasColumnName("rate");
+            entity.Property(e => e.Subcate)
+        .HasMaxLength(255)
+        .IsUnicode(false)
+        .HasColumnName("subcate");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)

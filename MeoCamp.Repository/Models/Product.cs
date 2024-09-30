@@ -33,6 +33,8 @@ public partial class Product
 
     public double Rate { get; set; }
 
+    public string Subcate { get; set; }
+
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 
     public virtual Category Category { get; set; }

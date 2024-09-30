@@ -24,9 +24,9 @@ namespace MeoCamp.API.Controllers
         }
 
         [HttpPost("add-to-cart")]
-        public async Task<IActionResult> AddToCart(int customerId, int productId, int quantity)
+        public async Task<IActionResult> AddToCart([FromBody] AddToCartRequest req)
         {
-            bool result = await _shoppingCartService.AddToCart(customerId, productId, quantity);
+            bool result = await _shoppingCartService.AddToCart(req.customerId, req.productId, req.quantity);
 
             if (result)
             {
@@ -35,6 +35,12 @@ namespace MeoCamp.API.Controllers
             return BadRequest("Không thể thêm sản phẩm vào giỏ hàng.");
         }
 
-      
+        public class AddToCartRequest
+        {
+            public int customerId { get; set; }
+            public int productId { get; set; }
+            public int quantity { get; set; }
+        }
+        
     }
 }

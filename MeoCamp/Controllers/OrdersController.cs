@@ -24,16 +24,23 @@ namespace MeoCamp.API.Controllers
         }
 
 
-        [HttpPost("checkout")]
-        public async Task<IActionResult> Checkout(int customerId, string paymentMethod, int amount)
+        [HttpPost("checkout/{customerId}")]
+        public async Task<IActionResult> Checkout([FromBody] CheckoutRequest checkoutReq)
         {
-            bool result = await _orderService.Checkout(customerId, paymentMethod, amount);
+            bool result = await _orderService.Checkout(checkoutReq.customerId, checkoutReq.paymentMethod, checkoutReq.amount);
 
             if (result)
             {
                 return Ok("Thanh toán thành công.");
             }
             return BadRequest("Không thể thanh toán.");
+        }
+
+        public class CheckoutRequest
+        {
+            public int customerId { get; set; }
+            public string paymentMethod { get; set; }
+            public int amount { get; set; }
         }
 
         // GET: api/Orders
