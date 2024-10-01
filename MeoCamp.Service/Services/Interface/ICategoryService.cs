@@ -15,7 +15,5 @@ namespace MeoCamp.Service.Services.Interface
         public Task<List<Category>> GetAllCategory();
 
         public Task<Category> UpdateCategory(int id, CategoryModel model);
-
-        public Task<bool> DeleteCategory(string category_name);
     }
 }

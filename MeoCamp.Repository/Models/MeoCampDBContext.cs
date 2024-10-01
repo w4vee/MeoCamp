@@ -98,9 +98,6 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.Description)
                 .HasColumnType("text")
                 .HasColumnName("description");
-            entity.Property(e => e.Status)
-                .HasColumnType("bit")
-                .HasColumnName("status");
         });
 
         modelBuilder.Entity<Feedback>(entity =>

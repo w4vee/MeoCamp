@@ -35,7 +35,6 @@ namespace MeoCamp.Service.Services
             {
                 CategoryName = model.CategoryName,
                 Description = model.Description,
-                Status = true,
             };
 
             await _categoryRepository.CreateCategory(newCategory);
@@ -69,21 +68,6 @@ namespace MeoCamp.Service.Services
             await _categoryRepository.UpdateCategory(existingCategory);
 
             return existingCategory;
-        }
-
-        public async Task<bool> DeleteCategory(string CategoryName)
-        {
-            var existingCategory = await _categoryRepository.GetCategoryByName(CategoryName);
-            if (existingCategory == null)
-            {
-                // throw new KeyNotFoundException("Người dùng ko tồn tại");
-                return false;
-            }
-            existingCategory.Status = false;
-
-            await _categoryRepository.UpdateCategory(existingCategory);
-
-            return true;
         }
     }
 }

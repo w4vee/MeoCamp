@@ -71,22 +71,5 @@ namespace MeoCamp.API.Controllers
             }
             return BadRequest("Invalid data.");
         }
-        [HttpPut("DeleteCategory")]
-        public async Task<IActionResult> DeleteCategory(string category_name)
-        {
-            if (ModelState.IsValid)
-            {
-                var result = await _categoryService.DeleteCategory(category_name);
-                if (result)
-                {
-                    return Ok("xóa thành công.");
-                }
-                else
-                {
-                    return BadRequest("Category chưa tồn tại.");
-                }
-            }
-            return BadRequest("Invalid data.");
-        }
     }
 }
