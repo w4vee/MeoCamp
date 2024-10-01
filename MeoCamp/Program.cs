@@ -36,6 +36,7 @@ namespace MeoCamp
             builder.Services.AddScoped<IFeedbackRepsitory, FeedbackRepository>();
             builder.Services.AddScoped<IBlogRepository, BlogRepository>();
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<IRentalRepository, RentalRepository>();
 
 
             // Registering Services with their interfaces
@@ -46,6 +47,7 @@ namespace MeoCamp
             builder.Services.AddScoped<IFeedbackService, FeedbackService>();
             builder.Services.AddScoped<IBlogService, BlogService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IRentalService, RentalService>();
 
             // Add generic repository if needed
             builder.Services.AddScoped<GenericRepository<Product>>();
@@ -55,6 +57,7 @@ namespace MeoCamp
             builder.Services.AddScoped<GenericRepository<Feedback>>();
             builder.Services.AddScoped<GenericRepository<Blog>> ();
             builder.Services.AddScoped<GenericRepository<Category>>();
+            builder.Services.AddScoped<GenericRepository<Rental>>();
 
             builder.Services.AddControllers();
             builder.Services.AddAuthorization();

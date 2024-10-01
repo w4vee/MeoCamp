@@ -30,7 +30,7 @@ namespace MeoCamp.Service.Services
             {
                 ProductName = name,
                 Description = description,
-                Price = price,
+                Price = (double)price,
                 RentalPrice = rentalprice,
                 IsRentable = isrentable,
                 CategoryId = categoryId,
@@ -73,7 +73,7 @@ namespace MeoCamp.Service.Services
                     return false;
                 }
                 existingProduct.ProductName = product.ProductName;
-                existingProduct.Price = product.Price;
+                existingProduct.Price = (double)product.Price;
                 existingProduct.Description = product.Description;
                 existingProduct.RentalPrice = product.RentalPrice;
                 existingProduct.IsRentable = product.IsRentable;
