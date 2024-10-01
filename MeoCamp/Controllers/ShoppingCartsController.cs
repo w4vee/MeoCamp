@@ -23,7 +23,7 @@ namespace MeoCamp.API.Controllers
             _shoppingCartService = shoppingCartService;
         }
 
-        [HttpPost("add-to-cart")]
+        [HttpPost("add-to-cart/{customerId}")]
         public async Task<IActionResult> AddToCart([FromBody] AddToCartRequest req)
         {
             bool result = await _shoppingCartService.AddToCart(req.customerId, req.productId, req.quantity);
