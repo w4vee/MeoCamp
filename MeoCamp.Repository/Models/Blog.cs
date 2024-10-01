@@ -10,6 +10,7 @@ namespace MeoCamp.Data.Models
     public partial class Blog
     {
         public int Id { get; set; }
+
         public int CustomerId { get; set; }
 
         public string Title { get; set; }
@@ -19,6 +20,7 @@ namespace MeoCamp.Data.Models
         public DateTime? Post_date { get; set; }
 
         public string? Image { get; set; }
+
         public virtual User Customer { get; set; }
     }
 }
