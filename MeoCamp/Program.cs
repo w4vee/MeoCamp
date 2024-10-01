@@ -1,4 +1,5 @@
 
+using MeoCamp.Data.Models;
 using MeoCamp.Data.Repositories;
 using MeoCamp.Data.Repositories.Interface;
 using MeoCamp.Repository;
@@ -32,6 +33,8 @@ namespace MeoCamp
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
             builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IFeedbackRepsitory, FeedbackRepository>();
+            builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 
 
             // Registering Services with their interfaces
@@ -39,12 +42,16 @@ namespace MeoCamp
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IOrderService, OrderService>();
             builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>();
+            builder.Services.AddScoped<IFeedbackService, FeedbackService>();
+            builder.Services.AddScoped<IBlogService, BlogService>();
 
             // Add generic repository if needed
             builder.Services.AddScoped<GenericRepository<Product>>();
             builder.Services.AddScoped<GenericRepository<Order>>();
             builder.Services.AddScoped<GenericRepository<ShoppingCart>>();
             builder.Services.AddScoped<GenericRepository<Payment>>();
+            builder.Services.AddScoped<GenericRepository<Feedback>>();
+            builder.Services.AddScoped<GenericRepository<Blog>> ();
 
             builder.Services.AddControllers();
             builder.Services.AddAuthorization();

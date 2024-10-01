@@ -22,6 +22,11 @@ namespace MeoCamp.Data.Repositories
         {
             return await _context.Set<User>().ToListAsync();
         }
+        public async Task<User?> GetUserByUserIdAsync(int userId)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            return user;
+        }
 
         public async Task<User?> GetUserByUsernameAsync(string username)
         {
