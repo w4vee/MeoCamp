@@ -89,7 +89,7 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("categories");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.CategoryName)
                 .HasMaxLength(255)
@@ -98,6 +98,9 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.Description)
                 .HasColumnType("text")
                 .HasColumnName("description");
+            entity.Property(e => e.Status)
+                .HasColumnType("bit")
+                .HasColumnName("status");
         });
 
         modelBuilder.Entity<Feedback>(entity =>
