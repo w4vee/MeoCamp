@@ -18,12 +18,13 @@ namespace MeoCamp.Service.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IFeedbackRepsitory _feedbackRepository;
-        GenericRepository<Feedback> _genericRepo;
+        private readonly GenericRepository<Feedback> _genericRepo;
 
-        public FeedbackService(IFeedbackRepsitory feedbackRepository)
+        public FeedbackService(IFeedbackRepsitory feedbackRepository, IUserRepository userRepository, GenericRepository<Feedback> genericRepo)
         {
             _feedbackRepository = feedbackRepository;
-            _genericRepo ??= new GenericRepository<Feedback>();
+            _genericRepo = genericRepo;
+            _userRepository = userRepository;
         }
         // tao feadback
         public async Task<Feedback> CreateFeedback(int userId, FeedbackModel model)
@@ -33,9 +34,10 @@ namespace MeoCamp.Service.Services
                 var user = await _userRepository.GetUserByUserIdAsync(userId);
                 if (user == null)
                 {
-                    // throw new KeyNotFoundException("Người dùng này ko tồn tại");
+                    // Không tìm thấy người dùng, trả về null hoặc xử lý theo cách khác
                     return null;
                 }
+
                 var feedback = new Feedback
                 {
                     CustomerId = userId,
@@ -43,14 +45,15 @@ namespace MeoCamp.Service.Services
                     Rate = model.rate
                 };
 
+                // Tạo mới feedback
                 await _feedbackRepository.CreateFeedback(feedback);
 
                 return feedback;
             }
             catch (Exception ex)
             {
-                throw new Exception("User not found.");
-                return null;
+                // Ghi log chi tiết lỗi (nếu cần)
+                throw new Exception("An error occurred while creating feedback: " + ex.Message, ex);
             }
         }
 

@@ -16,12 +16,13 @@ namespace MeoCamp.Service.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IBlogRepository _blogRepository;
-        GenericRepository<Blog> _genericRepo;
+        private readonly GenericRepository<Blog> _genericRepo;
 
-        public BlogService(IBlogRepository blogRepository)
+        public BlogService(IBlogRepository blogRepository, IUserRepository userRepository,GenericRepository<Blog> genericRepo )
         {
             _blogRepository = blogRepository;
-            _genericRepo ??= new GenericRepository<Blog>();
+            _genericRepo = genericRepo;
+            _userRepository = userRepository;
         }
         // tao Blog
         public async Task<Blog> CreateBlog(int userId, BlogModel model)
