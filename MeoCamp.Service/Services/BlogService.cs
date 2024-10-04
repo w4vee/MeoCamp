@@ -70,13 +70,12 @@ namespace MeoCamp.Service.Services
         // tra list Blog
         public async Task<List<Blog>> GetAllBlogAsync()
         {
-            try
+            var blogs = await _genericRepo.GetAllAsync();
+            if (blogs == null || !blogs.Any())
             {
-                var List = await _blogRepository.GetAllBlogAsync();
-                return List;
-            } catch (Exception ex) {
-                throw new Exception("List rong");
+                throw new Exception("No blogs found");
             }
+            return blogs;
         }
 
         // tim chu nhan cua Blog
