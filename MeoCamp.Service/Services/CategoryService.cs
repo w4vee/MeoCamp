@@ -56,11 +56,11 @@ namespace MeoCamp.Service.Services
                 // throw new KeyNotFoundException("Người dùng ko đã tồn tại");
                 return null;
             }
-            if (model.CategoryName != null && model.CategoryName != " ")
+            if (model.CategoryName != null && model.CategoryName != existingCategory.CategoryName)
             {
                 existingCategory.CategoryName = model.CategoryName;
             }
-            else if (model.CategoryName != null)
+            else if (model.CategoryName != null || model.Description != existingCategory.Description)
             {
                 existingCategory.Description = model.Description;
             }
