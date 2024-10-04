@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace MeoCamp.Repository.Models;
 
@@ -25,7 +26,9 @@ public partial class OrderDetail
 
     public DateTime? UpdatedAt { get; set; }
 
+    [JsonIgnore]
     public virtual Order Order { get; set; }
 
     public virtual Product Product { get; set; }
+
 }

@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace MeoCamp.Repository.Models;
 
@@ -19,5 +20,6 @@ public partial class Payment
 
     public string PaymentStatus { get; set; }
 
+    [JsonIgnore]
     public virtual Order Order { get; set; }
 }
