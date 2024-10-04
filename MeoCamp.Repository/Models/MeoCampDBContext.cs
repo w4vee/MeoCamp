@@ -255,9 +255,9 @@ public partial class MeoCampDBContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
             entity.Property(e => e.Description)
-                .IsUnicode(true)
-                .HasColumnType("text")
-                .HasColumnName("description");
+        .IsUnicode(true)
+        .HasColumnType("nvarchar(MAX)") // Sử dụng nvarchar(MAX) thay vì text
+        .HasColumnName("description");
             entity.Property(e => e.IsRentable).HasColumnName("is_rentable");
             entity.Property(e => e.Price)
         .HasColumnType("float") // or you can omit .HasColumnType() since 'double' is inferred as 'float'
@@ -290,9 +290,9 @@ public partial class MeoCampDBContext : DbContext
        .HasColumnType("float")
        .HasColumnName("rate");
             entity.Property(e => e.Subcate)
-        .HasMaxLength(255)
-        .IsUnicode(false)
-        .HasColumnName("subcate");
+       .HasMaxLength(255)
+       .IsUnicode(true) // Hỗ trợ Unicode để nhập tiếng Việt
+       .HasColumnName("subcate");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)

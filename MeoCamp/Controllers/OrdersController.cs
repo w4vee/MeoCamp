@@ -17,14 +17,16 @@ namespace MeoCamp.API.Controllers
     public class OrdersController : ControllerBase
     {
         private readonly IOrderService _orderService;
+        private MeoCampDBContext _context;
 
-        public OrdersController(IOrderService orderService)
+        public OrdersController(IOrderService orderService, MeoCampDBContext context)
         {
             _orderService = orderService;
+            _context = context;
         }
 
 
-        [HttpPost("checkout/{customerId}")]
+        [HttpPost("checkout")]
         public async Task<IActionResult> Checkout([FromBody] CheckoutRequest checkoutReq)
         {
             bool result = await _orderService.Checkout(checkoutReq.customerId, checkoutReq.paymentMethod, checkoutReq.amount);
@@ -63,6 +65,20 @@ namespace MeoCamp.API.Controllers
             }
 
             return order;
+        }
+
+        [HttpGet("get-detail/{id}")]
+        public async Task<ActionResult<Order>> GetOrderDetail(int id)
+        {
+            // Gọi service để lấy dữ liệu
+            var order = await _orderService.GetOrderByIdAsync(id);
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(order);
         }
 
 
