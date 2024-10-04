@@ -4,6 +4,7 @@ using MeoCamp.Repository;
 using MeoCamp.Repository.Models;
 using MeoCamp.Service.BusinessModel;
 using MeoCamp.Service.Services.Interface;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,14 +20,21 @@ namespace MeoCamp.Service.Services
         private readonly GenericRepository<Payment> _genericRepoPayment;
         private readonly IShoppingCartRepository _shoppingCartRepository;
         private readonly IProductRepository _productRepository;
+        private readonly MeoCampDBContext _context;
 
-        public OrderService(GenericRepository<Order> genericRepo, IShoppingCartRepository shoppingCartRepository, IOrderRepository orderRepository, IProductRepository productRepository, GenericRepository<Payment> genericRepoPayment)
+        public OrderService(GenericRepository<Order> genericRepo, IShoppingCartRepository shoppingCartRepository, IOrderRepository orderRepository, IProductRepository productRepository, GenericRepository<Payment> genericRepoPayment, MeoCampDBContext context)
         {
             _shoppingCartRepository = shoppingCartRepository;
             _genericRepo = genericRepo;
             _orderRepository = orderRepository;
             _productRepository = productRepository;
             _genericRepoPayment = genericRepoPayment;
+            _context = context;
+        }
+
+        public async Task<Order> GetOrderByIdAsync(int id)
+        {
+            return await _orderRepository.GetOrderDetailByIdAsync(id);
         }
 
         public async Task<bool> ProcessPayment(int customerId)
