@@ -18,7 +18,7 @@ namespace MeoCamp.Service.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IBlogRepository _blogRepository;
-        GenericRepository<Blog> _genericRepo;
+        private readonly GenericRepository<Blog> _genericRepo;
 
         public BlogService(IBlogRepository blogRepository, IUserRepository userRepository)
         {
@@ -92,13 +92,15 @@ namespace MeoCamp.Service.Services
         // tra list Blog
         public async Task<List<Blog>> GetAllBlogAsync()
         {
-            try
+            var blogs = await _genericRepo.GetAllAsync();
+            if (blogs == null || !blogs.Any())
             {
                 var List = await _blogRepository.GetAllBlogAsync();
                 return List;
             } catch (Exception ex) {
                 throw new Exception("Loi lay list");
             }
+            return blogs;
         }
 
         // tim chu nhan cua Blog

@@ -24,16 +24,14 @@ namespace MeoCamp.API.Controllers
         [HttpGet("getAllBlogs")]
         public async Task<IActionResult> GetAllBlogAsync()
         {
-            var result = await _blogService.GetAllBlogAsync();
-            if (result != null && result.Any())
+            try
             {
-                // lấy list thành công
-                return Ok(result);
+                var blogs = await _blogService.GetAllBlogAsync();
+                return Ok(blogs);
             }
-            else
+            catch (Exception ex)
             {
-                // lấy list failed
-                return BadRequest("List rỗng.");
+                return BadRequest(new { message = ex.Message });
             }
         }
 

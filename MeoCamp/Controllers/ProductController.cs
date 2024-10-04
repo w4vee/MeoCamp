@@ -4,6 +4,8 @@ using MeoCamp.Service.Services;
 using MeoCamp.Service.Services.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Drawing;
 
 namespace MeoCamp.API.Controllers
 {
@@ -25,9 +27,10 @@ namespace MeoCamp.API.Controllers
         [HttpPost("add-new-product")]
         public async Task<IActionResult> AddNewProdcut(ProductModel product)
         {
+            var imagesList = product.Images.ToList();
             if (ModelState.IsValid)
             {
-                var result = await _productService.AddNewProduct(product.ProductName, product.Description, product.Price, product.RentalPrice, product.IsRentable, product.CategoryId, product.Status, product.Image, product.Quantity, product.Rate);
+                var result = await _productService.AddNewProduct(product.ProductName, product.Description, product.Price, product.RentalPrice, product.IsRentable, product.CategoryId, product.Status, imagesList, product.Quantity, product.Rate, product.Subcate);
 
                 if (result != null)
                 {
@@ -45,7 +48,35 @@ namespace MeoCamp.API.Controllers
         public async Task<IActionResult> GetAllProducts()
         {
             var products = await _productService.GetAllProductsAsync();
-            return Ok(products);
+            if (products == null || !products.Any())
+            {
+                return NotFound("No products found.");
+            }
+
+            // Tạo danh sách DTO cho các sản phẩm
+            var productDtos = products.Select(product => new
+            {
+                product.Id,
+                product.ProductName,
+                product.Description,
+                product.Price,
+                product.RentalPrice,
+                product.IsRentable,
+                product.CategoryId,
+                product.CreatedAt,
+                product.UpdatedAt,
+                product.Status,
+                Images = product.Image, // Trả về trực tiếp danh sách hình ảnh
+                product.Quantity,
+                product.Rate,
+                //product.CartItems,
+                //product.Category,
+                //product.OrderDetails,
+                product.Rentals,
+                product.Subcate
+            }).ToList();
+
+            return Ok(productDtos);
         }
 
         [HttpPut("{id}")]
@@ -91,16 +122,71 @@ namespace MeoCamp.API.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        public async Task<IActionResult> GetProductById(int id)
         {
             var product = await _productService.GetProductById(id);
-
             if (product == null)
             {
-                return NotFound();
+                return NotFound("Product not found.");
             }
 
-            return product;
+           
+            var productDto = new
+            {
+                product.Id,
+                product.ProductName,
+                product.Description,
+                product.Price,
+                product.RentalPrice,
+                product.IsRentable,
+                product.CategoryId,
+                product.CreatedAt,
+                product.UpdatedAt,
+                product.Status,
+                Images = product.Image, 
+                product.Quantity,
+                product.Rate,
+                //product.CartItems,
+                //product.Category,
+                //product.OrderDetails,
+                product.Rentals,
+                product.Subcate
+            };
+
+            return Ok(productDto);
         }
+
+
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Product>> GetProduct(int id)
+        //{
+        //    var product = await _productService.GetProductById(id);
+
+        //    if (product == null)
+        //    {
+        //        return NotFound("Sản phẩm không tồn tại.");
+        //    }
+
+        //    var imageUrls = JsonConvert.DeserializeObject<List<string>>(product.Image);
+
+        //    var productDto = new
+        //    {
+        //        product.Id,
+        //        product.ProductName,
+        //        product.Description,
+        //        product.Price,
+        //        product.RentalPrice,
+        //        product.IsRentable,
+        //        product.CategoryId,
+        //        product.Status,
+        //        Images = imageUrls ?? new List<string>(), // Trả về danh sách các đường dẫn hình ảnh
+        //        product.Quantity,
+        //        product.Rate,
+        //        product.CreatedAt,
+        //        product.UpdatedAt
+        //    }; 
+
+        //    return Ok(product);
+        //}
     }
 }

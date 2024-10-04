@@ -10,7 +10,7 @@ namespace MeoCamp.Service.Services.Interface
 {
     public interface IProductService
     {
-        public Task<Product> AddNewProduct(string name, string description, double? price, double? rentalprice, bool? isrenable, int? categoryId, bool? status, string image, int quantity, double rate);
+        public Task<Product> AddNewProduct(string name, string description, double? price, double? rentalprice, bool? isrenable, int? categoryId, bool? status, List<string> images, int quantity, double rate, string subcate);
 
         public Task<IEnumerable<Product>> GetAllProductsAsync();
 

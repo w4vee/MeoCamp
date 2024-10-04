@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeoCamp.Repository.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,6 @@ namespace MeoCamp.Service.Services.Interface
     public interface IShoppingCartService
     {
         public Task<bool> AddToCart(int customerId, int productId, int quantity);
-
+        public Task<ShoppingCart> GetShoppingCartByCustomerIdAsync(int customerId);
     }
 };

@@ -22,8 +22,8 @@ public partial class MeoCampDBContext : DbContext
     public virtual DbSet<CartItem> CartItems { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
-    public virtual DbSet<Feedback> Feedbacks { get; set; }
-    public virtual DbSet<Blog> Blogs { get; set; }
+    public virtual DbSet<Feedback> Feedback { get; set; }
+    public virtual DbSet<Blog> Blog { get; set; }
 
     public virtual DbSet<Contact> Contacts { get; set; }
     public virtual DbSet<Order> Orders { get; set; }
@@ -104,7 +104,7 @@ public partial class MeoCampDBContext : DbContext
         modelBuilder.Entity<Feedback>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Feedback__3213E83F86CF20DF");
-            entity.ToTable("Feedbacks");
+            entity.ToTable("Feedback");
             entity.Property(e => e.Id)
             .ValueGeneratedOnAdd()
             .HasColumnName("id");
@@ -118,6 +118,7 @@ public partial class MeoCampDBContext : DbContext
             .HasColumnType("int")
             .HasColumnName("rate");
         });
+
 
         modelBuilder.Entity<Blog>(entity =>
         {
@@ -141,6 +142,8 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.Image)
             .HasColumnType("nvarchar(MAX)")
             .HasColumnName("image");
+            entity.Property(e => e.Status)
+            .HasColumnType("bit");
         });
 
         modelBuilder.Entity<Order>(entity =>
@@ -253,15 +256,16 @@ public partial class MeoCampDBContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
             entity.Property(e => e.Description)
-                .HasColumnType("text")
-                .HasColumnName("description");
+        .IsUnicode(true)
+        .HasColumnType("nvarchar(MAX)") // Sử dụng nvarchar(MAX) thay vì text
+        .HasColumnName("description");
             entity.Property(e => e.IsRentable).HasColumnName("is_rentable");
             entity.Property(e => e.Price)
         .HasColumnType("float") // or you can omit .HasColumnType() since 'double' is inferred as 'float'
         .HasColumnName("price");
             entity.Property(e => e.ProductName)
                 .HasMaxLength(255)
-                .IsUnicode(false)
+                .IsUnicode(true)
                 .HasColumnName("product_name");
             entity.Property(e => e.RentalPrice)
         .HasColumnType("float") // or omit this if inferred from the 'double' type in your model
@@ -286,6 +290,10 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.Rate)
        .HasColumnType("float")
        .HasColumnName("rate");
+            entity.Property(e => e.Subcate)
+       .HasMaxLength(255)
+       .IsUnicode(true) // Hỗ trợ Unicode để nhập tiếng Việt
+       .HasColumnName("subcate");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
@@ -457,6 +465,35 @@ public partial class MeoCampDBContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("username");
         });
+
+        modelBuilder.Entity<Contact>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Contacts");
+
+            entity.ToTable("contacts");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("id");
+
+            entity.Property(e => e.Name).IsUnicode(true)
+                .HasMaxLength(255)
+                .HasColumnName("name");
+
+            entity.Property(e => e.Email)
+                .HasMaxLength(255)
+                .HasColumnName("email");
+
+            entity.Property(e => e.Phone)
+                .HasMaxLength(50)
+                .HasColumnName("phone");
+
+            entity.Property(e => e.Description).IsUnicode(true)
+                .HasColumnType("text")
+                .HasColumnName("description");
+        });
+
+
 
         OnModelCreatingPartial(modelBuilder);
     }

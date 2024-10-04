@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace MeoCamp.Service.Services
 {
@@ -23,9 +24,10 @@ namespace MeoCamp.Service.Services
             _genericRepo = genericRepo;
         }
 
-        public async Task<Product> AddNewProduct(string name, string description, double? price, double? rentalprice, bool? isrentable, int? categoryId, bool? status, string image, int quantity, double rate)
+        public async Task<Product> AddNewProduct(string name, string description, double? price, double? rentalprice, bool? isrentable, int? categoryId, bool? status, List<string> images, int quantity, double rate, string subcate)
         {
-            
+           
+
             Product newProduct = new Product
             {
                 ProductName = name,
@@ -35,14 +37,15 @@ namespace MeoCamp.Service.Services
                 IsRentable = isrentable,
                 CategoryId = categoryId,
                 Status = status,
-                Image = image,
+                Image = images, 
                 Quantity = quantity,
                 Rate = rate,
+                Subcate = subcate,
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now
             };
 
-           await _productRepository.AddNewProduct(newProduct);
+            await _productRepository.AddNewProduct(newProduct);
 
             return newProduct;
         }
@@ -81,6 +84,7 @@ namespace MeoCamp.Service.Services
                 existingProduct.Status = product.Status;
                 existingProduct.Quantity = product.Quantity;
                 existingProduct.Rate = product.Rate;
+                existingProduct.Subcate = product.Subcate;
                 await _productRepository.UpdateProduct(existingProduct);
                 return true;
             }
