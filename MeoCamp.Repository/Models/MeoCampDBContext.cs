@@ -253,6 +253,7 @@ public partial class MeoCampDBContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
             entity.Property(e => e.Description)
+                .IsUnicode(true)
                 .HasColumnType("text")
                 .HasColumnName("description");
             entity.Property(e => e.IsRentable).HasColumnName("is_rentable");
@@ -261,7 +262,7 @@ public partial class MeoCampDBContext : DbContext
         .HasColumnName("price");
             entity.Property(e => e.ProductName)
                 .HasMaxLength(255)
-                .IsUnicode(false)
+                .IsUnicode(true)
                 .HasColumnName("product_name");
             entity.Property(e => e.RentalPrice)
         .HasColumnType("float") // or omit this if inferred from the 'double' type in your model
@@ -435,6 +436,35 @@ public partial class MeoCampDBContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("username");
         });
+
+        modelBuilder.Entity<Contact>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Contacts");
+
+            entity.ToTable("contacts");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("id");
+
+            entity.Property(e => e.Name).IsUnicode(true)
+                .HasMaxLength(255)
+                .HasColumnName("name");
+
+            entity.Property(e => e.Email)
+                .HasMaxLength(255)
+                .HasColumnName("email");
+
+            entity.Property(e => e.Phone)
+                .HasMaxLength(50)
+                .HasColumnName("phone");
+
+            entity.Property(e => e.Description).IsUnicode(true)
+                .HasColumnType("text")
+                .HasColumnName("description");
+        });
+
+
 
         OnModelCreatingPartial(modelBuilder);
     }
