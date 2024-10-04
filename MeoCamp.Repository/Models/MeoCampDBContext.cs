@@ -141,6 +141,8 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.Image)
             .HasColumnType("nvarchar(MAX)")
             .HasColumnName("image");
+            entity.Property(e => e.Status)
+            .HasColumnType("bit");
         });
 
         modelBuilder.Entity<Order>(entity =>

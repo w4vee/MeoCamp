@@ -35,6 +35,31 @@ namespace MeoCamp.API.Controllers
             return BadRequest("Không thể thêm sản phẩm vào giỏ hàng.");
         }
 
+
+        [HttpGet("cart-items/{customerId}")]
+        public async Task<IActionResult> GetCartItemsByCustomerId(int customerId)
+        {
+            // Lấy giỏ hàng của customer dựa trên CustomerId
+            var shoppingCart = await _shoppingCartService.GetShoppingCartByCustomerIdAsync(customerId);
+
+            if (shoppingCart == null)
+            {
+                return NotFound("Shopping cart not found for this customer.");
+            }
+
+            // Lấy toàn bộ các CartItem từ giỏ hàng
+            var cartItems = shoppingCart.CartItems.Select(cartItem => new
+            {
+                cartItem.ProductId,
+                ProductName = cartItem.Product.ProductName,
+                cartItem.Product.Price,
+                cartItem.Product.RentalPrice,
+                cartItem.Quantity,
+                cartItem.AddedAt
+            }).ToList();
+
+            return Ok(cartItems);
+        }
         public class AddToCartRequest
         {
             public int customerId { get; set; }
