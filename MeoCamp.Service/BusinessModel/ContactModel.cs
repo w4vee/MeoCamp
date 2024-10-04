@@ -1,16 +1,13 @@
-
-﻿using MeoCamp.Repository.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MeoCamp.Data.Models
+namespace MeoCamp.Service.BusinessModel
 {
-    public partial class Contact
+    public class ContactModel
     {
-        public int Id { get; set; }
         public string User_name { get; set; }
         public string Mail { get; set; }
         public string Phone { get; set; }
