@@ -3,6 +3,7 @@ using MeoCamp.Data.Repositories.Interface;
 using MeoCamp.Repository;
 using MeoCamp.Repository.Models;
 using MeoCamp.Service.Services.Interface;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,13 @@ namespace MeoCamp.Service.Services
     {
         private readonly IShoppingCartRepository _shoppingCartRepository;
         private readonly GenericRepository<ShoppingCart> _genericRepo;
+        private readonly MeoCampDBContext _context;
 
-        public ShoppingCartService(IShoppingCartRepository shoppingCartRepository, GenericRepository<ShoppingCart> genericRepo)
+        public ShoppingCartService(IShoppingCartRepository shoppingCartRepository, GenericRepository<ShoppingCart> genericRepo, MeoCampDBContext context)
         {
             _shoppingCartRepository = shoppingCartRepository;
             _genericRepo = genericRepo;
+            _context = context;
         }
 
         public async Task<bool> AddToCart(int customerId, int productId, int quantity)
@@ -66,5 +69,12 @@ namespace MeoCamp.Service.Services
             return true;
         }
 
+        public async Task<ShoppingCart> GetShoppingCartByCustomerIdAsync(int customerId)
+        {
+            return await _context.ShoppingCarts
+                .Include(sc => sc.CartItems)
+                    .ThenInclude(ci => ci.Product) // Include product thông qua CartItem
+                .FirstOrDefaultAsync(sc => sc.CustomerId == customerId);
+        }
     }
 }
