@@ -43,7 +43,7 @@ namespace MeoCamp.Data.Repositories
 
         public async Task<Product> GetProductById(int id)
         {
-            return await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Products.FindAsync(id);
         }
 
         public async Task<int> SoftDeleteProduct(int id)

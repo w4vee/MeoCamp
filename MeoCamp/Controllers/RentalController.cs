@@ -1,30 +1,28 @@
 ﻿using MeoCamp.Service.BusinessModel;
-using MeoCamp.Service.Services;
 using MeoCamp.Service.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
-using System.Web.Http.ModelBinding;
 
 namespace MeoCamp.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class BlogController : ControllerBase
+    public class RentalController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly IBlogService _blogService;
-        private readonly ILogger<FeedbackController> _logger;
+        private readonly IRentalService _rentalService;
+        private readonly ILogger<RentalController> _logger;
 
-        public BlogController(IConfiguration configuration, IBlogService blogService, ILogger<FeedbackController> logger)
+        public RentalController(IConfiguration configuration, IRentalService rentalService, ILogger<RentalController> logger)
         {
             _configuration = configuration;
-            _blogService = blogService;
+            _rentalService = rentalService;
             _logger = logger;
         }
 
-        [HttpGet("getAllBlogs")]
-        public async Task<IActionResult> GetAllBlogAsync()
+        [HttpGet("getAllRentals")]
+        public async Task<IActionResult> GetAllRentalAsync()
         {
-            var result = await _blogService.GetAllBlogAsync();
+            var result = await _rentalService.GetAllRentalAsync();
             if (result != null && result.Any())
             {
                 // lấy list thành công
@@ -37,12 +35,12 @@ namespace MeoCamp.API.Controllers
             }
         }
 
-        [HttpGet("getBlogbyuserId/{userId}")]
-        public async Task<IActionResult> GetBlogbyUserIdAsync(int userId)
+        [HttpGet("getRentalbyuserId/{userId}")]
+        public async Task<IActionResult> GetRentalbyUserIdAsync(int userId)
         {
             if (ModelState.IsValid)
             {
-                var result = await _blogService.GetBlogbyUserIdAsync(userId);
+                var result = await _rentalService.GetRentalbyUserIdAsync(userId);
                 if (result != null)
                 {
                     // lấy feedback thành công
@@ -56,12 +54,12 @@ namespace MeoCamp.API.Controllers
             }
             return BadRequest("Invalid data.");
         }
-        [HttpPost("CreateBlog/{userId}")]
-        public async Task<IActionResult> CreateBlog(int userId, BlogModel model)
+        [HttpPost("CreateRental/{userId}")]
+        public async Task<IActionResult> CreateRental(int userId, RentalModel model)
         {
             if (ModelState.IsValid)
             {
-                var result = await _blogService.CreateBlog(userId, model);
+                var result = await _rentalService.CreateRental(userId, model);
                 if (result != null)
                 {
                     // tạo feedback thành công
@@ -75,12 +73,13 @@ namespace MeoCamp.API.Controllers
             }
             return BadRequest("Invalid data.");
         }
-        [HttpPut("UpdateBlog/{userId}")]
-        public async Task<IActionResult> UpdateBlog(int userId, BlogModel model)
+        [HttpPut("UpdateRental/{userId}")]
+        public async Task<IActionResult> UpdateRental(int userId, RentalModel model)
         {
             if (ModelState.IsValid)
             {
-                var result = await _blogService.UpdateBlog(userId, model);
+                var result = await _rentalService.UpdateRental(userId, model);
+
                 if (result != null)
                 {
                     // cập nhật feedback thành công
@@ -94,12 +93,12 @@ namespace MeoCamp.API.Controllers
             }
             return BadRequest("Invalid data.");
         }
-        [HttpDelete("DeleteBlog/{userId}")]
-        public async Task<IActionResult> DeleteBlog(int userId)
+        [HttpDelete("DeleteRental/{userId}")]
+        public async Task<IActionResult> DeleteRental(int userId)
         {
             if (ModelState.IsValid)
             {
-                var result = await _blogService.DeleteBlog(userId);
+                var result = await _rentalService.DeleteRental(userId);
                 if (result)
                 {
                     // xoá feedback thành công
@@ -115,4 +114,3 @@ namespace MeoCamp.API.Controllers
         }
     }
 }
-
