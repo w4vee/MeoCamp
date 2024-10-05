@@ -25,6 +25,24 @@ namespace MeoCamp.API.Controllers
             _context = context;
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateOrder(int id, UpdateOrderModel order)
+        {
+            if (ModelState.IsValid)
+            {
+                bool result = await _orderService.UpdateOrder(id, order);
+
+                if (result)
+                {
+                    return Ok("Order update successfully.");
+                }
+                else
+                {
+                    return BadRequest("Failed to update product.");
+                }
+            }
+            return BadRequest("Invalid data.");
+        }
 
         [HttpPost("checkout")]
         public async Task<IActionResult> Checkout([FromBody] CheckoutRequest checkoutReq)
@@ -100,7 +118,6 @@ namespace MeoCamp.API.Controllers
             }
             return BadRequest("Invalid data.");
         }
-
 
     }
 }

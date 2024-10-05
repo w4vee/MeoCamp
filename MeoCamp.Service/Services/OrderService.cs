@@ -159,5 +159,28 @@ namespace MeoCamp.Service.Services
             return await _genericRepo.GetByIdAsync(id);
         }
 
+
+        public async Task<bool> UpdateOrder(int id, UpdateOrderModel order)
+        {
+            try
+            {
+                var existingOrder = await _genericRepo.GetByIdAsync(id);
+                if (existingOrder == null)
+                {
+                    return false;
+                }
+                existingOrder.OrderStatus = order.OrderStatus;
+                existingOrder.UpdatedAt = DateTime.Now ;
+                
+                await _genericRepo.UpdateAsync(existingOrder);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                throw new Exception("Error");
+                return false;
+            }
+        }
     }
 }

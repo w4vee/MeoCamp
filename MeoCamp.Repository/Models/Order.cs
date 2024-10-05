@@ -22,6 +22,7 @@ public partial class Order
 
     public DateTime? UpdatedAt { get; set; }
 
+
     public virtual User Customer { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();

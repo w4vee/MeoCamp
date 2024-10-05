@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace MeoCamp.Service.BusinessModel
 {
-    public class UpdateOrderModel
+    public class UpdateItemModel
     {
-        public string OrderStatus { get; set; }
-
-        public DateTime? UpdatedAt { get; set; }
+        public int Quantity { get; set; }
     }
 }

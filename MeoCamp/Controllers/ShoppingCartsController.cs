@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MeoCamp.Repository.Models;
 using MeoCamp.Service.Services;
 using MeoCamp.Service.Services.Interface;
+using MeoCamp.Service.BusinessModel;
 
 namespace MeoCamp.API.Controllers
 {
@@ -16,11 +17,33 @@ namespace MeoCamp.API.Controllers
     public class ShoppingCartsController : ControllerBase
     {
         private readonly IShoppingCartService _shoppingCartService;
+        
 
 
         public ShoppingCartsController(IShoppingCartService shoppingCartService)
         {
             _shoppingCartService = shoppingCartService;
+        }
+
+
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateQuantity(int id, UpdateItemModel item)
+        {
+            if (ModelState.IsValid)
+            {
+                bool result = await _shoppingCartService.UpdateItemQuantity(id, item);
+
+                if (result)
+                {
+                    return Ok("Quantity update successfully.");
+                }
+                else
+                {
+                    return BadRequest("Failed to update quantity.");
+                }
+            }
+            return BadRequest("Invalid data.");
         }
 
         [HttpPost("add-to-cart")]
@@ -60,6 +83,29 @@ namespace MeoCamp.API.Controllers
 
             return Ok(cartItems);
         }
+
+        [HttpDelete("remove-from-cart/{cartItemId}")]
+        public async Task<IActionResult> RemoveFromCart(int cartItemId)
+        {
+            var cartItem = await _shoppingCartService.GetCartItemById(cartItemId);
+
+            if (cartItem == null)
+            {
+                return NotFound("Cart item not found.");
+            }
+
+            var result = await _shoppingCartService.RemoveCartItem(cartItem);
+
+            if (result)
+            {
+                return Ok("Item removed from cart successfully.");
+            }
+
+            return BadRequest("Failed to remove item from cart.");
+        }
+
+        
+
         public class AddToCartRequest
         {
             public int customerId { get; set; }

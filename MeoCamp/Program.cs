@@ -39,6 +39,7 @@ namespace MeoCamp
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IFeedbackRepsitory, FeedbackRepository>();
             builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+            
 
 
             // Registering Services with their interfaces
@@ -56,6 +57,7 @@ namespace MeoCamp
             builder.Services.AddScoped<GenericRepository<Payment>>();
             builder.Services.AddScoped<GenericRepository<Feedback>>();
             builder.Services.AddScoped<GenericRepository<Blog>> ();
+            builder.Services.AddScoped<GenericRepository<CartItem>>();
 
             builder.Services.AddControllers();
             builder.Services.AddAuthorization();
