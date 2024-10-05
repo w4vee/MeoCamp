@@ -11,7 +11,8 @@ namespace MeoCamp.Service.Services.Interface
     public interface IBlogService
     {
         public Task<List<Blog>> GetAllBlogAsync();
-        public Task<Blog> GetBlogbyUserIdAsync(int userId);
+        public Task<List<Blog>> GetBlogbyUserIdAsync(int userId);
+        public Task<bool> ApproveBlog(int blogId);
         public Task<Blog> CreateBlog(int userId, BlogModel model);
         public Task<Blog> UpdateBlog(int userId, BlogModel model);
         public Task<bool> DeleteBlog(int userId);

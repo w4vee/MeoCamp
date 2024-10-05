@@ -37,10 +37,16 @@ namespace MeoCamp.Data.Repositories
             return await _context.Set<Blog>().ToListAsync();
         }
 
-        public async Task<Blog> GetBlogbyUserIdAsync(int userId)
+        public async Task<Blog> GetBlogbyIdAsync(int Id)
         {
-            var Blog = await _context.Blog.FirstOrDefaultAsync(x => x.CustomerId == userId);
+            var Blog = await _context.Blogs.FindAsync(Id);
             return Blog;
+        }
+
+        public async Task<List<Blog>> GetBlogbyUserIdAsync(int userId)
+        {
+            var blogs = await _context.Blogs.Where(x => x.CustomerId == userId).ToListAsync();
+            return blogs;
         }
 
         public async Task<Blog> UpdateBlog(Blog blog)
