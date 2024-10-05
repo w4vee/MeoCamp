@@ -10,6 +10,8 @@ namespace MeoCamp.Service.BusinessModel
     {
         public string OrderStatus { get; set; }
 
+        public string DeliveryAddress { get; set; }
+
         public DateTime? UpdatedAt { get; set; }
     }
 }
