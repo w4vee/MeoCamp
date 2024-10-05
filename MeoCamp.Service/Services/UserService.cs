@@ -110,19 +110,19 @@ namespace MeoCamp.Service.Services
                 return false;
             }
             // cập nhật theo ý người nhập
-            if (profile.Fullname != null && profile.Fullname != "")
+            if (profile.Fullname != null && profile.Fullname != existingUser.Fullname)
             {
                 existingUser.Fullname = profile.Fullname;
             }
-            if (profile.PhoneNumber != null && profile.PhoneNumber != "")
+            if (profile.PhoneNumber != null && profile.PhoneNumber != existingUser.PhoneNumber)
             {
                 existingUser.PhoneNumber = profile.PhoneNumber;
             }
-            if (profile.Address != null && profile.Address != "")
+            if (profile.Address != null && profile.Address != existingUser.Address)
             {
                 existingUser.Address = profile.Address;
             }
-            if (profile.Email != null && profile.Email != "")
+            if (profile.Email != null && profile.Email != existingUser.Email)
             {
                 existingUser.Email = profile.Email;
             }

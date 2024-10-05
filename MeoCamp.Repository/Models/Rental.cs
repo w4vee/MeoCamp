@@ -9,15 +9,17 @@ public partial class Rental
 {
     public int Id { get; set; }
 
-    public int? CustomerId { get; set; }
+    public int CustomerId { get; set; }
 
-    public int? ProductId { get; set; }
+    public int ProductId { get; set; }
 
     public DateTime? RentalStartDate { get; set; }
 
     public DateTime? RentalEndDate { get; set; }
 
-    public int? TotalPrice { get; set; }
+    public string Description { get; set; }
+
+    public double TotalPrice { get; set; }
 
     public string RentalStatus { get; set; }
 

@@ -12,9 +12,9 @@ namespace MeoCamp.API.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IBlogService _blogService;
-        private readonly ILogger<FeedbackController> _logger;
+        private readonly ILogger<BlogController> _logger;
 
-        public BlogController(IConfiguration configuration, IBlogService blogService, ILogger<FeedbackController> logger)
+        public BlogController(IConfiguration configuration, IBlogService blogService, ILogger<BlogController> logger)
         {
             _configuration = configuration;
             _blogService = blogService;
@@ -49,7 +49,7 @@ namespace MeoCamp.API.Controllers
                 else
                 {
                     // tìm feedback failed
-                    return BadRequest("chưa feedback.");
+                    return BadRequest("chưa có Blog.");
                 }
             }
             return BadRequest("Invalid data.");
@@ -68,17 +68,17 @@ namespace MeoCamp.API.Controllers
                 else
                 {
                     // tạo feedback failed
-                    return BadRequest("feedback không thành công.");
+                    return BadRequest("Blog không thành công.");
                 }
             }
             return BadRequest("Invalid data.");
         }
-        [HttpPut("UpdateFBlog/{userId}")]
-        public async Task<IActionResult> UpdateBlog(int userId, BlogModel model)
+        [HttpPut("UpdateBlog/{Id}")]
+        public async Task<IActionResult> UpdateBlog(int Id, BlogModel model)
         {
             if (ModelState.IsValid)
             {
-                var result = await _blogService.UpdateBlog(userId, model);
+                var result = await _blogService.UpdateBlog(Id, model);
                 if (result != null)
                 {
                     // cập nhật feedback thành công
@@ -87,26 +87,45 @@ namespace MeoCamp.API.Controllers
                 else
                 {
                     // cập nhật feedback failed
-                    return BadRequest("feedback cập nhật không thành công.");
+                    return BadRequest("Blog cập nhật không thành công.");
                 }
             }
             return BadRequest("Invalid data.");
         }
-        [HttpDelete("DeleteBlog/{userId}")]
-        public async Task<IActionResult> DeleteBlog(int userId)
+        [HttpPut("ApproveBlog/{Id}")]
+        public async Task<IActionResult> ApproveBlog(int Id)
         {
             if (ModelState.IsValid)
             {
-                var result = await _blogService.DeleteBlog(userId);
+                var result = await _blogService.ApproveBlog(Id);
+                if (result)
+                {
+                    // cập nhật feedback thành công
+                    return Ok("Blog được phê duyệt");
+                }
+                else
+                {
+                    // cập nhật feedback failed
+                    return BadRequest("Blog không được phê duyệt");
+                }
+            }
+            return BadRequest("Invalid data.");
+        }
+        [HttpDelete("DeleteBlog/{Id}")]
+        public async Task<IActionResult> DeleteBlog(int Id)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _blogService.DeleteBlog(Id);
                 if (result)
                 {
                     // xoá feedback thành công
-                    return Ok("feedback xoá không thành công.");
+                    return Ok("Blog xoá không thành công.");
                 }
                 else
                 {
                     // xoá feedback failed
-                    return BadRequest("feedback xoá không thành công.");
+                    return BadRequest("Blog xoá không thành công.");
                 }
             }
             return BadRequest("Invalid data.");
