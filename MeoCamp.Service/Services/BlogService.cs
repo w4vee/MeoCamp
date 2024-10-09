@@ -1,6 +1,8 @@
 ﻿using MeoCamp.Data.Models;
+using MeoCamp.Data.Repositories;
 using MeoCamp.Data.Repositories.Interface;
 using MeoCamp.Repository;
+using MeoCamp.Repository.Models;
 using MeoCamp.Service.BusinessModel;
 using MeoCamp.Service.Services.Interface;
 using System;
@@ -18,12 +20,31 @@ namespace MeoCamp.Service.Services
         private readonly IBlogRepository _blogRepository;
         private readonly GenericRepository<Blog> _genericRepo;
 
-        public BlogService(IBlogRepository blogRepository, IUserRepository userRepository,GenericRepository<Blog> genericRepo )
+        public BlogService(IBlogRepository blogRepository, IUserRepository userRepository)
         {
             _blogRepository = blogRepository;
-            _genericRepo = genericRepo;
             _userRepository = userRepository;
+            _genericRepo ??= new GenericRepository<Blog>();
         }
+        // duyet Blog
+        public async Task<bool> ApproveBlog(int blogId)
+        {
+            var blog = await _blogRepository.GetBlogbyIdAsync(blogId);
+            if (blog != null)
+            {
+                if (blog.Status == false)
+                {
+                    blog.Status = true;
+
+                    await _blogRepository.UpdateBlog(blog);
+                    return true;
+
+                }
+            }
+
+            return false;
+        }
+
         // tao Blog
         public async Task<Blog> CreateBlog(int userId, BlogModel model)
         {
@@ -41,7 +62,8 @@ namespace MeoCamp.Service.Services
                     Title = model.title,
                     Content = model.content,
                     Post_date = DateTime.Now,
-                    Image = model.image
+                    Image = model.image,
+                    Status = false
                 };
 
                 await _blogRepository.CreateBlog(blog);
@@ -56,9 +78,9 @@ namespace MeoCamp.Service.Services
         }
 
         // xoa Blog
-        public async Task<bool> DeleteBlog(int userId)
+        public async Task<bool> DeleteBlog(int Id)
         {
-            var blog = await _blogRepository.GetBlogbyUserIdAsync(userId);
+            var blog = await _blogRepository.GetBlogbyIdAsync(Id);
             if (blog != null)
             {
                 await _blogRepository.DeleteBlog(blog);
@@ -70,35 +92,48 @@ namespace MeoCamp.Service.Services
         // tra list Blog
         public async Task<List<Blog>> GetAllBlogAsync()
         {
-            var blogs = await _genericRepo.GetAllAsync();
-            if (blogs == null || !blogs.Any())
+            try
             {
-                throw new Exception("No blogs found");
+                    var List = await _blogRepository.GetAllBlogAsync();
+                    return List;
             }
-            return blogs;
+            catch (Exception e)
+            {
+                throw new Exception("Loi lay list");
+            }
         }
 
         // tim chu nhan cua Blog
-        public async Task<Blog> GetBlogbyUserIdAsync(int userId)
+        public async Task<List<Blog>> GetBlogbyUserIdAsync(int userId)
         {
-            return await _blogRepository.GetBlogbyUserIdAsync(userId);
+            try
+            {
+                var List = await _blogRepository.GetBlogbyUserIdAsync(userId);
+                return List;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Loi lay list");
+            }
         }
 
         // cap nhat Blog
-        public async Task<Blog> UpdateBlog(int userId, BlogModel model)
+        public async Task<Blog> UpdateBlog(int Id, BlogModel model)
         {
-            var blog = await _blogRepository.GetBlogbyUserIdAsync(userId);
+            var blog = await _blogRepository.GetBlogbyIdAsync(Id);
             if (blog != null)
             {
-                if (model.title != null || model.title != " ")
+                if (model.title != null || model.title != blog.Title)
                 {
                     blog.Title = model.title;
                 }
-                else if (model.content != null || model.content != " ")
+                
+                if (model.content != null || model.content != blog.Content)
                 {
                     blog.Content = model.content;
                 }
-                else if (model.image != null)
+                
+                if (model.image != null || model.image != blog.Image)
                 {
                     blog.Image = model.image;
                 }

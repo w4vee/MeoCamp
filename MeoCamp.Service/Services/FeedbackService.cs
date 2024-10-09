@@ -88,11 +88,12 @@ namespace MeoCamp.Service.Services
             var feedback = await _feedbackRepository.GetFeedbackbyUserIdAsync(userId);
             if (feedback != null)
             {
-                if (model.description != null || model.description != " ")
+                if (model.description != null || model.description != feedback.Description)
                 {
                     feedback.Description = model.description;
                 }
-                else if (model.rate != null)
+                
+                if (model.rate != null || model.rate != feedback.Rate)
                 {
                     feedback.Rate = model.rate;
                 }

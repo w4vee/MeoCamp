@@ -20,7 +20,7 @@ namespace MeoCamp.Data.Repositories
         }
         public async Task<Feedback> CreateFeedback(Feedback feedback)
         {
-            _context.Feedback.Add(feedback);
+            _context.Feedbacks.Add(feedback);
             await _context.SaveChangesAsync();
             return feedback;
         }
@@ -34,7 +34,7 @@ namespace MeoCamp.Data.Repositories
         
         public async Task<bool> DeleteFeedback(Feedback feedback)
         {
-                _context.Feedback.Remove(feedback);
+                _context.Feedbacks.Remove(feedback);
                 await _context.SaveChangesAsync();
                 return true;
         }
@@ -46,7 +46,7 @@ namespace MeoCamp.Data.Repositories
 
         public async Task<Feedback> GetFeedbackbyUserIdAsync(int userId)
         {
-            var Feedback = await _context.Feedback.FirstOrDefaultAsync(x => x.CustomerId == userId);
+            var Feedback = await _context.Feedbacks.FirstOrDefaultAsync(x => x.CustomerId == userId);
             return Feedback;
         }
     }

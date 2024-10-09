@@ -10,7 +10,8 @@ namespace MeoCamp.Data.Repositories.Interface
     public interface IBlogRepository
     {
         public Task<List<Blog>> GetAllBlogAsync();
-        public Task<Blog> GetBlogbyUserIdAsync(int userId);
+        public Task<List<Blog>> GetBlogbyUserIdAsync(int userId);
+        public Task<Blog> GetBlogbyIdAsync(int Id);
         public Task<Blog> CreateBlog(Blog blog);
         public Task<Blog> UpdateBlog(Blog blog);
         public Task<bool> DeleteBlog(Blog blog); 
