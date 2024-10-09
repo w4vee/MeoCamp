@@ -80,6 +80,13 @@ namespace MeoCamp.Data.Repositories
             return cart;
         }
 
-        
+
+        public async Task<CartItem> GetCartItemById(int id)
+        {
+            return await _context.CartItems
+                .Include(ci => ci.Product)  // Optional: Load related product if needed
+                .FirstOrDefaultAsync(ci => ci.Id == id);
+        }
+
     }
 }

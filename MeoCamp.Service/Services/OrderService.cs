@@ -76,7 +76,7 @@ namespace MeoCamp.Service.Services
             return true;
         }
 
-        public async Task<bool> Checkout(int customerId, string paymentMethod, int amount)
+        public async Task<bool> Checkout(int customerId, string paymentMethod, int amount, string deliveryAddress)
         {
             // Tạo đơn hàng từ giỏ hàng
             var cart = await _shoppingCartRepository.GetCartByUserId(customerId);
@@ -91,6 +91,7 @@ namespace MeoCamp.Service.Services
                 OrderDate = DateTime.Now,
                 TotalAmount = (int?)cart.CartItems.Sum(ci => ci.Quantity * ci.Product.Price),
                 OrderStatus = "Pending",
+                DeliveryAddress = deliveryAddress,
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
                 OrderDetails = new List<OrderDetail>()
@@ -159,5 +160,29 @@ namespace MeoCamp.Service.Services
             return await _genericRepo.GetByIdAsync(id);
         }
 
+
+        public async Task<bool> UpdateOrder(int id, UpdateOrderModel order)
+        {
+            try
+            {
+                var existingOrder = await _genericRepo.GetByIdAsync(id);
+                if (existingOrder == null)
+                {
+                    return false;
+                }
+                existingOrder.OrderStatus = order.OrderStatus;
+                existingOrder.DeliveryAddress = order.DeliveryAddress;
+                existingOrder.UpdatedAt = DateTime.Now ;
+                
+                await _genericRepo.UpdateAsync(existingOrder);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                throw new Exception("Error");
+                return false;
+            }
+        }
     }
 }

@@ -16,5 +16,7 @@ namespace MeoCamp.Data.Repositories.Interface
         public Task<ShoppingCart> ClearCart(ShoppingCart cart);
 
         public Task RemoveAllCartItems(ShoppingCart cart);
+
+        public Task<CartItem> GetCartItemById(int id);
     }
 }

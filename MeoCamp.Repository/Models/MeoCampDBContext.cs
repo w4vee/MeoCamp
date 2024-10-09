@@ -164,7 +164,7 @@ public partial class MeoCampDBContext : DbContext
                 .HasColumnName("order_date");
             entity.Property(e => e.OrderStatus)
                 .HasMaxLength(50)
-                .IsUnicode(false)
+                .IsUnicode(true)
                 .HasColumnName("order_status");
             entity.Property(e => e.TotalAmount)
                 .HasColumnType("int")
@@ -172,6 +172,9 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("updated_at");
+            entity.Property(e => e.DeliveryAddress).HasColumnName("delivery_address")
+                .HasMaxLength(255)
+                .IsUnicode(true);
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.CustomerId)

@@ -2,6 +2,7 @@
 using MeoCamp.Data.Repositories.Interface;
 using MeoCamp.Repository;
 using MeoCamp.Repository.Models;
+using MeoCamp.Service.BusinessModel;
 using MeoCamp.Service.Services.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,12 +17,14 @@ namespace MeoCamp.Service.Services
     {
         private readonly IShoppingCartRepository _shoppingCartRepository;
         private readonly GenericRepository<ShoppingCart> _genericRepo;
+        private readonly GenericRepository<CartItem> _cartItemRepo;
         private readonly MeoCampDBContext _context;
 
-        public ShoppingCartService(IShoppingCartRepository shoppingCartRepository, GenericRepository<ShoppingCart> genericRepo, MeoCampDBContext context)
+        public ShoppingCartService(IShoppingCartRepository shoppingCartRepository, GenericRepository<ShoppingCart> genericRepo, GenericRepository<CartItem> cartItemRepo, MeoCampDBContext context)
         {
             _shoppingCartRepository = shoppingCartRepository;
             _genericRepo = genericRepo;
+            _cartItemRepo = cartItemRepo;
             _context = context;
         }
 
@@ -69,12 +72,56 @@ namespace MeoCamp.Service.Services
             return true;
         }
 
+        public async Task<CartItem> GetCartItemById(int cartItemId)
+        {
+            return await _context.CartItems
+                .Include(ci => ci.Product)  // Optional nếu bạn muốn load thêm thông tin sản phẩm
+                .FirstOrDefaultAsync(ci => ci.Id == cartItemId);
+        }
+
         public async Task<ShoppingCart> GetShoppingCartByCustomerIdAsync(int customerId)
         {
             return await _context.ShoppingCarts
                 .Include(sc => sc.CartItems)
                     .ThenInclude(ci => ci.Product) // Include product thông qua CartItem
                 .FirstOrDefaultAsync(sc => sc.CustomerId == customerId);
+        }
+
+        public async Task<bool> RemoveCartItem(CartItem cartItem)
+        {
+            try
+            {
+                _context.CartItems.Remove(cartItem);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateItemQuantity(int id, UpdateItemModel item)
+        {
+            try
+            {
+                var existingItem = await _cartItemRepo.GetByIdAsync(id);
+                if (existingItem == null)
+                {
+                    return false;
+                }
+                existingItem.Quantity = item.Quantity;
+                
+
+                await _cartItemRepo.UpdateAsync(existingItem);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                throw new Exception("Error");
+                return false;
+            }
         }
     }
 }
