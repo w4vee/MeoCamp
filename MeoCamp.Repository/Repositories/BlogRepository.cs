@@ -20,14 +20,14 @@ namespace MeoCamp.Data.Repositories
         }
         public async Task<Blog> CreateBlog(Blog blog)
         {
-            _context.Blog.Add(blog);
+            _context.Blogs.Add(blog);
             await _context.SaveChangesAsync();
             return blog;
         }
 
         public async Task<bool> DeleteBlog(Blog blog)
         {
-            _context.Blog.Remove(blog);
+            _context.Blogs.Remove(blog);
             await _context.SaveChangesAsync();
             return true;
         }

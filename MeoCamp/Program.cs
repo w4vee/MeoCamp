@@ -62,7 +62,7 @@ namespace MeoCamp
             builder.Services.AddScoped<GenericRepository<Payment>>();
             builder.Services.AddScoped<GenericRepository<Feedback>>();
             builder.Services.AddScoped<GenericRepository<Blog>> ();
-
+            builder.Services.AddScoped<GenericRepository<CartItem>>();
             builder.Services.AddScoped<GenericRepository<Category>>();
             builder.Services.AddScoped<GenericRepository<Rental>>();
             builder.Services.AddScoped<GenericRepository<Contact>>();

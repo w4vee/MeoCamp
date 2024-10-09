@@ -19,6 +19,8 @@ namespace MeoCamp.Data.Models
 
         public DateTime? Post_date { get; set; }
 
+        public bool? Status { get; set; }
+
         public string? Image { get; set; }
       
         public virtual User Customer { get; set; }

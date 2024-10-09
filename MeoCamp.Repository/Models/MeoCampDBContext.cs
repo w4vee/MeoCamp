@@ -22,8 +22,8 @@ public partial class MeoCampDBContext : DbContext
     public virtual DbSet<CartItem> CartItems { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
-    public virtual DbSet<Feedback> Feedback { get; set; }
-    public virtual DbSet<Blog> Blog { get; set; }
+    public virtual DbSet<Feedback> Feedbacks { get; set; }
+    public virtual DbSet<Blog> Blogs { get; set; }
 
     public virtual DbSet<Contact> Contacts { get; set; }
     public virtual DbSet<Order> Orders { get; set; }
@@ -479,11 +479,11 @@ public partial class MeoCampDBContext : DbContext
                 .ValueGeneratedOnAdd()
                 .HasColumnName("id");
 
-            entity.Property(e => e.Name).IsUnicode(true)
+            entity.Property(e => e.User_name).IsUnicode(true)
                 .HasMaxLength(255)
                 .HasColumnName("name");
 
-            entity.Property(e => e.Email)
+            entity.Property(e => e.Mail)
                 .HasMaxLength(255)
                 .HasColumnName("email");
 
