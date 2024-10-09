@@ -25,6 +25,7 @@ public partial class MeoCampDBContext : DbContext
     public virtual DbSet<Feedback> Feedback { get; set; }
     public virtual DbSet<Blog> Blog { get; set; }
 
+    public virtual DbSet<Contact> Contacts { get; set; }
     public virtual DbSet<Order> Orders { get; set; }
 
     public virtual DbSet<OrderDetail> OrderDetails { get; set; }
@@ -89,7 +90,7 @@ public partial class MeoCampDBContext : DbContext
             entity.ToTable("categories");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.CategoryName)
                 .HasMaxLength(255)
@@ -121,8 +122,8 @@ public partial class MeoCampDBContext : DbContext
 
         modelBuilder.Entity<Blog>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Blog__3213E83F86CF20DF");
-            entity.ToTable("Blog");
+            entity.HasKey(e => e.Id).HasName("PK__Blog__2975AA28F2E1D290");
+            entity.ToTable("Blogs");
             entity.Property(e => e.Id)
             .ValueGeneratedOnAdd()
             .HasColumnName("id");
@@ -332,6 +333,9 @@ public partial class MeoCampDBContext : DbContext
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("updated_at");
+            entity.Property(e => e.Description)
+                .HasColumnType("text")
+                .HasColumnName("description");
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Rentals)
                 .HasForeignKey(d => d.CustomerId)
@@ -380,6 +384,29 @@ public partial class MeoCampDBContext : DbContext
             entity.HasOne(d => d.Customer).WithMany(p => p.ShoppingCarts)
                 .HasForeignKey(d => d.CustomerId)
                 .HasConstraintName("FK__shopping___custo__36B12243");
+        });
+
+        modelBuilder.Entity<Contact>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("id"); // deo biet cai cuc nay dau ra
+            entity.ToTable("contacts");
+            entity.Property(e => e.Id)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("id");
+            entity.Property(entity => entity.User_name)
+                .HasColumnType("varchar(50)")
+                .HasColumnName("name");
+            entity.Property(e => e.Mail)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("email");
+            entity.Property(e => e.Phone)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("phone");
+            entity.Property(e => e.Description)
+                .HasColumnType("nvarchar(MAX)")
+                .HasColumnName("description");
         });
 
         modelBuilder.Entity<User>(entity =>
