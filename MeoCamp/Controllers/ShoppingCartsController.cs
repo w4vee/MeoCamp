@@ -73,6 +73,7 @@ namespace MeoCamp.API.Controllers
             // Lấy toàn bộ các CartItem từ giỏ hàng
             var cartItems = shoppingCart.CartItems.Select(cartItem => new
             {
+                cartItem.Id,
                 cartItem.ProductId,
                 ProductName = cartItem.Product.ProductName,
                 cartItem.Product.Price,
