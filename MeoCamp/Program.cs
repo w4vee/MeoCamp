@@ -7,6 +7,7 @@ using MeoCamp.Repository.Models;
 using MeoCamp.Service.Services;
 using MeoCamp.Service.Services.Interface;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 namespace MeoCamp
 {
@@ -17,8 +18,28 @@ namespace MeoCamp
             
 
             var builder = WebApplication.CreateBuilder(args);
+
+
+            //        builder.Services.AddDbContext<MeoCampDBContext>(options =>
+            //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+            var connection = String.Empty;
+            if (builder.Environment.IsDevelopment())
+            {
+                connection = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
+            }
+            else
+            {
+                connection = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+            }
+
             builder.Services.AddDbContext<MeoCampDBContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+             options.UseSqlServer(connection));
+
+
+
 
             builder.Services.AddCors(options =>
             {
